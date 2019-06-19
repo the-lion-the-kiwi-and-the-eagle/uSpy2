@@ -8,6 +8,7 @@ import { HomeComponent } from "./components/home/home.component";
 
 const routes: Routes = [
     { path: "", component: HomeComponent },
+    
     // { path: "", redirectTo: "/items", pathMatch: "full" },
     // { path: "items", component: ItemsComponent },
     // { path: "item/:id", component: ItemDetailComponent }
