@@ -1,1 +1,4 @@
-<Button text="login works!" [nsRouterLink]="['/home']" pageTransition="slide" class="btn btn-primary"></Button>
+<StackLayout>
+    <Label text="Login!"></Label>
+    <Button text="login works!" [nsRouterLink]="['/home']" pageTransition="slide" class="btn btn-primary" (tap)="onSignin()"></Button>
+</StackLayout>
