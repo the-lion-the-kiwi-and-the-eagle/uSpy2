@@ -1,14 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, tap } from 'rxjs/operators';
-import { throwError, BehaviorSubject, of } from 'rxjs';
-import { alert } from 'tns-core-modules/ui/dialogs';
-import { RouterExtensions } from 'nativescript-angular/router';
-import {
-    setString,
-    getString,
-    hasKey,
-    remove
-} from 'tns-core-modules/application-settings';
+
+
+const FIREBASE_API_KEY = "AIzaSyCyGI2wUsrwcrNexTgWe-xJwYzUJz-Zez4";
+
+@Injectable({ providedIn: 'root' })
+export class LoginService { 
+    constructor(private http: HttpClient) {}
+
+    signUp(email: string, password: string) {
+        return this.http.post(`https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${FIREBASE_API_KEY}`,
+        {email: email, password: password, returnSecureToken: true})
+    }
+    login(email: string, password: string) {
+        return this.http.post(`https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${FIREBASE_API_KEY}`, {
+            email: email, password: password, returnSecureToken: true
+        });
+    }
+}
 
 
