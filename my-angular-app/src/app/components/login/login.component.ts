@@ -12,7 +12,7 @@ import { LoginService } from './login.service';
   moduleId: module.id
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup;
+  // form: FormGroup;
   emailControlIsValid = true;
   passwordControlIsValid = true;
   isLogin = true;
@@ -21,19 +21,26 @@ export class LoginComponent implements OnInit {
   @ViewChild('emailEl', {static: false}) emailEl: ElementRef<TextField>;
 
   constructor(private router: RouterExtensions, private LoginService: LoginService) {}
-
+  credentials = {
+    email: "",
+    password: ""
+  }
+  form = new FormGroup({
+    email: new FormControl(null, {
+      updateOn: 'blur',
+      validators: [Validators.required, Validators.email]
+    }),
+    password: new FormControl(null, {
+      updateOn: 'blur',
+      validators: [Validators.required, Validators.minLength(6)]
+    })
+  });
   ngOnInit() {
-    this.form = new FormGroup({
-      email: new FormControl(null, {
-        updateOn: 'blur',
-        validators: [Validators.required, Validators.email]
-      }),
-      password: new FormControl(null, {
-        updateOn: 'blur',
-        validators: [Validators.required, Validators.minLength(6)]
-      })
-    });
-
+    
+    //this could be a problem here. Its doing a form.get to email, but theres not value on intiation of app. 
+    // const email = this.form.get('email').value;
+    // const password = this.form.get('password').value;
+    // console.log({email, password})
     this.form.get('email').statusChanges.subscribe(status => {
       this.emailControlIsValid = status === 'VALID';
     });
@@ -44,21 +51,27 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.emailEl.nativeElement.focus();
-    this.passwordEl.nativeElement.focus();
-    this.passwordEl.nativeElement.dismissSoftInput();
+    console.log('heyyyy')
+    console.log(this.credentials)
+    // return;
+    // this.emailEl.nativeElement.focus();
+    // this.passwordEl.nativeElement.focus();
+    // this.passwordEl.nativeElement.dismissSoftInput();
 
-    if (!this.form.valid) {
-      return;
-    }
+    // if (!this.form.valid) {
+    //   console.log('ooopsy')
+    //   return;
+    // }
 
-    const email = this.form.get('email').value;
-    const password = this.form.get('password').value;
-    this.form.reset();
+    // const email = this.form.get('email').value;
+    // const password = this.form.get('password').value;
+    // this.form.reset();
+    const { email, password } = this.credentials;
     this.emailControlIsValid = true;
     this.passwordControlIsValid = true;
     this.isLoading = true;
     if (this.isLogin) {
+      console.log({email, password})
       this.LoginService.login(email, password).subscribe(
         resData => {
           this.isLoading = false;
