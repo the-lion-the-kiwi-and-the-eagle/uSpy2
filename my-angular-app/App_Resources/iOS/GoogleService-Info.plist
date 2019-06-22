@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>798384716096-mcbofu4ub1vqdeoe578jkjqto0ova8ab.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.798384716096-mcbofu4ub1vqdeoe578jkjqto0ova8ab</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC-KzxRQQv5vuprIVidtDOjA2dXQjKW5Dc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>798384716096</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.nativescript.myangularapp</string>
+	<key>PROJECT_ID</key>
+	<string>uspy-7ba40</string>
+	<key>STORAGE_BUCKET</key>
+	<string>uspy-7ba40.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:798384716096:ios:c0dc91b3ddb02402</string>
+	<key>DATABASE_URL</key>
+	<string>https://uspy-7ba40.firebaseio.com</string>
+</dict>
+</plist>
