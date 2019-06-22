@@ -1,11 +1,14 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+import { NativeScriptHttpModule } from 'nativescript-angular/http'
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
+import { ItemsComponent } from "./components/item/items.component";
+import { ItemDetailComponent } from "./components/item/item-detail.component";
 import { HomeComponent } from "./components/home/home.component";
+
+import { Vision } from "./services/vision";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -19,6 +22,7 @@ import { HomeComponent } from "./components/home/home.component";
     ],
     imports: [
         NativeScriptModule,
+        NativeScriptHttpModule,
         AppRoutingModule
     ],
     declarations: [
@@ -27,7 +31,9 @@ import { HomeComponent } from "./components/home/home.component";
         HomeComponent,
         ItemDetailComponent
     ],
-    providers: [],
+    providers: [
+        Vision
+    ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
