@@ -3,15 +3,15 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptUISideDrawerModule } from 'nativescript-ui-sidedrawer/angular/side-drawer-directives';
 import { HttpClientModule } from '@angular/common/http';
 import { NativeScriptUIDataFormModule } from 'nativescript-ui-dataform/angular/dataform-directives'
-
+import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
 import { LoginComponent } from "./components/login/login.component";
 import { HomeComponent } from "./components/home/home.component";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
+
+import { Vision } from "./services/vision";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -29,17 +29,19 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
         NativeScriptUISideDrawerModule,
         AppRoutingModule,
         HttpClientModule,
+        HttpModule,
         ReactiveFormsModule,
         FormsModule,
     ],
     declarations: [
         AppComponent,
-        ItemsComponent,
         LoginComponent,
         HomeComponent,
-        ItemDetailComponent
+        
     ],
-    providers: [],
+    providers: [
+        Vision
+    ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
