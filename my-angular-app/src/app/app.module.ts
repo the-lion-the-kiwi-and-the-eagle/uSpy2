@@ -3,7 +3,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptUISideDrawerModule } from 'nativescript-ui-sidedrawer/angular/side-drawer-directives';
 import { HttpClientModule } from '@angular/common/http';
 import { NativeScriptUIDataFormModule } from 'nativescript-ui-dataform/angular/dataform-directives'
-
+import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./components/login/login.component";
@@ -29,6 +29,7 @@ import { Vision } from "./services/vision";
         NativeScriptUISideDrawerModule,
         AppRoutingModule,
         HttpClientModule,
+        HttpModule,
         ReactiveFormsModule,
         FormsModule,
     ],

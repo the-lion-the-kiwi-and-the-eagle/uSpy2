@@ -1,11 +1,6 @@
 <ActionBar title="uSpy"></ActionBar>
 
 <StackLayout>
-
-
-    <Button text="Log in" class="btn btn-primary"></Button>
-    <Button text="Sign up" class="btn btn-primary"></Button>
-    
     <TextField hint="Items to find..." [text]="itemsToFind" autocorrect="false" (returnPress)="onReturn($event)" class="input input-border"></TextField>
     <Label class="h3 text-center" [text]="'The first item to find is: ' + firstTx" textWrap="true" marginBottom="25"></Label>
     <Button text="Enter item" (tap)="showAlert(firstTx)" class="btn btn-primary btn-active"></Button>
