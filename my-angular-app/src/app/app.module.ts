@@ -10,6 +10,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { HomeComponent } from "./components/home/home.component";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { Vision } from "./services/vision";
+import { ListComponent } from "./components/list/list.component";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -36,6 +37,7 @@ import { Vision } from "./services/vision";
         HomeComponent,
         AppComponent,
         LoginComponent,
+        ListComponent,
         
     ],
     providers: [
