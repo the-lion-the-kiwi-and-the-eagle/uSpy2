@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.myangularuspyapp",
+    "id": "org.nativescript.myangularapp",
     "tns-android": {
       "version": "5.4.0"
     },
@@ -30,7 +30,7 @@
     "nativescript-ui-dataform": "^4.0.1",
     "nativescript-ui-sidedrawer": "^6.0.0",
     "reflect-metadata": "~0.1.12",
-    "rxjs": "~6.5.0",
+    "rxjs": "^6.5.2",
     "tns-core-modules": "^5.4.3",
     "zone.js": "~0.9.1"
   },

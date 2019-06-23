@@ -9,7 +9,7 @@
             "type": "nativescript",
             "request": "launch",
             "platform": "ios",
-            "appRoot": "${workspaceRoot}",
+            "appRoot": "${workspaceRoot}/my-angular-app",
             "sourceMaps": true,
             "watch": true
         },
@@ -32,7 +32,7 @@
             "type": "nativescript",
             "request": "attach",
             "platform": "ios",
-            "appRoot": "${workspaceRoot}",
+            "appRoot": "${workspaceRoot}/my-angualr-app",
             "sourceMaps": true,
             "watch": false
         },
