@@ -1,8 +1,6 @@
-<ns-action-bar [title]="isLogin ? 'Login' : 'Signup'" [hasMenu]="false"></ns-action-bar>
-<RadDataForm [source]="credentials"></RadDataForm>
-
-
 <StackLayout verticalAlignment="bottom">
+    <ns-action-bar [title]="isLogin ? 'Login' : 'Signup'" [hasMenu]="false"></ns-action-bar>
+    <RadDataForm [source]="credentials"></RadDataForm>
     <Button class="btn btn-rounded-sm" [text]="isLogin ? 'Signup instead' : 'Login instead'" (tap)="onSwitch()"></Button>
     <Button [text]="isLogin ? 'Login' : 'Signup'" class="btn btn-primary btn-rounded-sm" (tap)="onSubmit()"></Button>
     <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
