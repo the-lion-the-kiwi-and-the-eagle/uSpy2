@@ -6,7 +6,7 @@ import { NativeScriptUIDataFormModule } from 'nativescript-ui-dataform/angular/d
 import { NativeScriptHttpModule } from 'nativescript-angular/http';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-//import { LoginComponent } from "./components/login/login.component";
+import { LoginComponent } from "./components/login/login.component";
 import { HomeComponent } from "./components/home/home.component";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { Vision } from "./services/vision";
@@ -35,7 +35,7 @@ import { Vision } from "./services/vision";
     declarations: [
         HomeComponent,
         AppComponent,
-        //LoginComponent,
+        LoginComponent,
         
     ],
     providers: [
