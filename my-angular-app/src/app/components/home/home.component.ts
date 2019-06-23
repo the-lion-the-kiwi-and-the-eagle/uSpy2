@@ -4,6 +4,7 @@ import { Image } from "tns-core-modules/ui/image";
 import * as imageSource from "tns-core-modules/image-source";
 import { TextField } from "tns-core-modules/ui/text-field";
 
+
 import {Vision} from "../../services/vision";
 import {ImageFormat} from "tns-core-modules/ui/enums";
 
@@ -18,28 +19,28 @@ export class HomeComponent {
   public firstTx: string = "";
   public isLoading:boolean = false;
 
-  public onTextChange(args) {
-    let textField = <TextField>args.object;
+//   public onTextChange(args) {
+//     let textField = <TextField>args.object;
 
-    console.log("onTextChange");
-    this.firstTx = textField.text;
+//     console.log("onTextChange");
+//     this.firstTx = textField.text;
     
-}
+// }
 
-  public onReturn(args) {
-    let textField = <TextField>args.object;
+//   public onReturn(args) {
+//     let textField = <TextField>args.object;
 
-    console.log("onReturn");
-    this.firstTx = textField.text;
-}
+//     console.log("onReturn");
+//     this.firstTx = textField.text;
+// }
 
-  public showAlert(result) {
-    alert("Text: " + result);
-}
+//   public showAlert(result) {
+//     alert("Text: " + result);
+// }
 
-  public submit(result) {
-    alert("Text: " + result);
-}
+//   public submit(result) {
+//     alert("Text: " + result);
+// }
   constructor(@Inject(Vision) private vision: Vision) { }
 
   ngOnInit() {
@@ -59,14 +60,14 @@ export class HomeComponent {
           this.lastPicture = img;
           console.log('request payload size is: ', this.lastPicture.toBase64String(ImageFormat.jpeg, 80).length);
           return this.vision.evaluatePicture(this.lastPicture.toBase64String(ImageFormat.jpeg, 80)) 
-          })
+        })
     .then((evaluation) => {
       console.log(evaluation);
           this.imageDescription = evaluation.things;
           this.isLoading = false;
-            })
-          
+        })
     .catch((err) => {
+      console.log(err);
           console.log("Error -> " + err.message);
           function failure() {
           console.log('wap wap waaammmmmm');

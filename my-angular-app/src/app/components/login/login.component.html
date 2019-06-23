@@ -1,4 +1,4 @@
-<StackLayout verticalAlignment="bottom">
+<StackLayout verticalAlignment="center">
     <ns-action-bar [title]="isLogin ? 'Login' : 'Signup'" [hasMenu]="false"></ns-action-bar>
     <RadDataForm [source]="credentials"></RadDataForm>
     <Button class="btn btn-rounded-sm" [text]="isLogin ? 'Signup instead' : 'Login instead'" (tap)="onSwitch()"></Button>
