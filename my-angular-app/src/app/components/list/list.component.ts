@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { Observable } from "tns-core-modules/data/observable";
-
+import { RouterExtensions } from 'nativescript-angular/router';;
 
 @Component({
   selector: 'ns-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
+  moduleId: module.id,
 })
+@Injectable({ providedIn: 'root' })
 export class ListComponent extends Observable {
 
-  constructor() { 
-    super()
-    this.list = new Items("cat", "dog", "pen", "bike");
+  constructor(private router: RouterExtensions) { 
+    super();
+    this.list = new Items("Headphones", "dog", "Pen", "bike");
   }
 
   set list(value: Items) {
@@ -22,7 +24,16 @@ export class ListComponent extends Observable {
     return this.get("_list")
   }
 
+  onSubmit() {
+    this.router.navigate(['/home']);
+  }
+
+  getList()  {
+    return this.get("_list");
+  }
+
   ngOnInit() {
+    
   }
 
 }
