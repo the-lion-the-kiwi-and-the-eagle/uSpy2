@@ -1,50 +1,52 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import * as camera from "nativescript-camera";
 import { Image } from "tns-core-modules/ui/image";
 import * as imageSource from "tns-core-modules/image-source";
 import { TextField } from "tns-core-modules/ui/text-field";
 
 
-import {Vision} from "../../services/vision";
-import {ImageFormat} from "tns-core-modules/ui/enums";
+import { Vision } from "../../services/vision";
+import { ImageFormat } from "tns-core-modules/ui/enums";
+import { ListComponent } from '../list/list.component';
 
 @Component({
   selector: 'ns-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   public lastPicture:any;
   public imageDescription:any;
   public firstTx: string = "";
   public isLoading:boolean = false;
+  public item1:string = "";
+  public item2:string = "";
+  public item3:string = "";
+  public item4:string = "";
+  @Input() list: ListComponent;
+  
+  constructor(@Inject(Vision) private vision: Vision, @Inject(ListComponent) private ListComponent: ListComponent) {
 
-//   public onTextChange(args) {
-//     let textField = <TextField>args.object;
+  }
 
-//     console.log("onTextChange");
-//     this.firstTx = textField.text;
-    
-// }
-
-//   public onReturn(args) {
-//     let textField = <TextField>args.object;
-
-//     console.log("onReturn");
-//     this.firstTx = textField.text;
-// }
-
-//   public showAlert(result) {
-//     alert("Text: " + result);
-// }
-
-//   public submit(result) {
-//     alert("Text: " + result);
-// }
-  constructor(@Inject(Vision) private vision: Vision) { }
 
   ngOnInit() {
+    const object = this.ListComponent.getList();
+    console.log(object, 'fdsjhakfhdska')
+    this.item1 = object.item1
+    this.item2 = object.item2
+    this.item3 = object.item3
+    this.item4 = object.item4
   }
+
+  // renderList() {
+  //   const object = this.ListComponent.getList();
+  //   console.log(object, 'fdsjhakfhdska')
+  //   object.item1 = this.item1
+  //   object.item2 = this.item2
+  //   object.item3 = this.item3
+  //   object.item4 = this.item4
+  // }
 
   public openCam() {
     camera.requestPermissions()

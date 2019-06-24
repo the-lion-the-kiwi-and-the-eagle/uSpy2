@@ -1,1 +1,10 @@
-<Button text="list works!" class="btn btn-primary" nsRouterLink="['/home']"></Button>
+<FlexboxLayout>
+    <StackLayout verticalAlignment="top">
+        <RadDataForm [source]="list"></RadDataForm>
+    </StackLayout>
+    <StackLayout>
+        <Button text="list works!" class="btn btn-primary" (tap)="onSubmit()"></Button>
+    </StackLayout>
+</FlexboxLayout>
+
+
