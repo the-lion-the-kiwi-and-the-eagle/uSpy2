@@ -28,6 +28,10 @@ export class ListComponent extends Observable {
     this.router.navigate(['/home']);
   }
 
+  navigateProfile() {
+    this.router.navigate(['/profile']);
+  }
+
   getList()  {
     return this.get("_list");
   }
