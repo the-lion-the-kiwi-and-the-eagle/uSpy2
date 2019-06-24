@@ -1,10 +1,13 @@
-<FlexboxLayout>
-    <StackLayout verticalAlignment="top">
+<StackLayout>
+    <StackLayout>
         <RadDataForm [source]="list"></RadDataForm>
     </StackLayout>
     <StackLayout>
         <Button text="Save and Play!" class="btn btn-primary" (tap)="onSubmit()"></Button>
     </StackLayout>
-</FlexboxLayout>
+    <StackLayout>
+        <Button text="Profile" class="btn btn-primary" (tap)="navigateProfile()"></Button>
+    </StackLayout>
+</StackLayout>
 
 
