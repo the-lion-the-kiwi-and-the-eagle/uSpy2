@@ -19,28 +19,6 @@ export class HomeComponent {
   public firstTx: string = "";
   public isLoading:boolean = false;
 
-//   public onTextChange(args) {
-//     let textField = <TextField>args.object;
-
-//     console.log("onTextChange");
-//     this.firstTx = textField.text;
-    
-// }
-
-//   public onReturn(args) {
-//     let textField = <TextField>args.object;
-
-//     console.log("onReturn");
-//     this.firstTx = textField.text;
-// }
-
-//   public showAlert(result) {
-//     alert("Text: " + result);
-// }
-
-//   public submit(result) {
-//     alert("Text: " + result);
-// }
   constructor(@Inject(Vision) private vision: Vision) { }
 
   ngOnInit() {
