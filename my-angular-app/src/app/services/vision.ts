@@ -68,7 +68,10 @@ export class Vision {
         let retString = '';
         if(things) {
             things.forEach(thing => {
-                retString += thing.description + ' (' + Math.floor(thing.score * 100) + '%), ' 
+                if(thing.score > 0.9){
+                    retString += thing.description + ' (' + Math.floor(thing.score * 100) + '%), ' 
+
+                }
             });    
         }
         return retString;

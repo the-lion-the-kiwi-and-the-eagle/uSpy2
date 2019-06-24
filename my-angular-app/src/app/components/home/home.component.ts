@@ -40,14 +40,6 @@ export class HomeComponent implements OnInit {
     this.item4 = object.item4
   }
 
-  // renderList() {
-  //   const object = this.ListComponent.getList();
-  //   console.log(object, 'fdsjhakfhdska')
-  //   object.item1 = this.item1
-  //   object.item2 = this.item2
-  //   object.item3 = this.item3
-  //   object.item4 = this.item4
-  // }
 
   public openCam() {
     camera.requestPermissions()
@@ -68,13 +60,34 @@ export class HomeComponent implements OnInit {
       console.log(evaluation);
           this.imageDescription = evaluation.things;
           console.log(typeof this.imageDescription, 'hel;llllo')
-          if(this.imageDescription.includes(this.item1 || this.item2 || this.item3 || this.item4)) {
+          if(this.imageDescription.includes(this.item1)) {
             TNSFancyAlert.showSuccess(
               "Success!",
-              `You found ${this.item1}`,
-              "Yes they are!"
+              `You found the ${this.item1}!`,
+              "Keep Searching"
              );
-            console.log('successssss')
+            console.log('successssss');
+          } else if(this.imageDescription.includes(this.item2)) {
+            TNSFancyAlert.showSuccess(
+              "Success!",
+              `You found the ${this.item2}!`,
+              "Keep Searching"
+             );
+            console.log('successssss');
+          } else if(this.imageDescription.includes(this.item3)) {
+            TNSFancyAlert.showSuccess(
+              "Success!",
+              `You found the ${this.item3}!`,
+              "Keep Searching"
+             );
+            console.log('successssss');
+          } else if(this.imageDescription.includes(this.item4)) {
+            TNSFancyAlert.showSuccess(
+              "Success!",
+              `You found the ${this.item4}!`,
+              "You won the game!"
+             );
+            console.log('succccesssss'); 
           } else {
             TNSFancyAlert.showError(
               "You lost, try again!"
