@@ -13,7 +13,7 @@ export class ListComponent extends Observable {
 
   constructor(private router: RouterExtensions) { 
     super();
-    this.list = new Items("cat", "dog", "pen", "bike");
+    this.list = new Items("Headphones", "dog", "pen", "bike");
   }
 
   set list(value: Items) {

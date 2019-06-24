@@ -3,6 +3,7 @@ import * as camera from "nativescript-camera";
 import { Image } from "tns-core-modules/ui/image";
 import * as imageSource from "tns-core-modules/image-source";
 import { TextField } from "tns-core-modules/ui/text-field";
+import { TNSFancyAlert } from 'nativescript-fancyalert';
 
 
 import { Vision } from "../../services/vision";
@@ -66,6 +67,20 @@ export class HomeComponent implements OnInit {
     .then((evaluation) => {
       console.log(evaluation);
           this.imageDescription = evaluation.things;
+          console.log(typeof this.imageDescription, 'hel;llllo')
+          if(this.imageDescription.includes(this.item1 || this.item2 || this.item3 || this.item4)) {
+            TNSFancyAlert.showSuccess(
+              "Success!",
+              `You found ${this.item1}`,
+              "Yes they are!"
+             );
+            console.log('successssss')
+          } else {
+            TNSFancyAlert.showError(
+              "You lost, try again!"
+             );
+            console.log('you lost')
+          }
           this.isLoading = false;
         })
     .catch((err) => {
