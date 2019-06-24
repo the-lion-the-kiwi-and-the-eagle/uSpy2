@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit {
       this.LoginService.login(email, password).subscribe(
         resData => {
           this.isLoading = false;
-          this.router.navigate(['/home']);
+          this.router.navigate(['/list']);
         },
         err => {
           console.log(err);
@@ -86,7 +86,7 @@ export class LoginComponent implements OnInit {
       this.LoginService.signUp(email, password).subscribe(
         resData => {
           this.isLoading = false;
-          this.router.navigate(['/home']);
+          this.router.navigate(['/list']);
         },
         err => {
           console.log(err);
