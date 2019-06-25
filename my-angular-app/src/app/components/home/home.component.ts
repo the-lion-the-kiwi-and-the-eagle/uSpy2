@@ -4,6 +4,7 @@ import { Image } from "tns-core-modules/ui/image";
 import * as imageSource from "tns-core-modules/image-source";
 import { TextField } from "tns-core-modules/ui/text-field";
 import { TNSFancyAlert } from 'nativescript-fancyalert';
+import { ListServiceService } from '../list/list-service.service'
 
 
 import { Vision } from "../../services/vision";
@@ -26,18 +27,18 @@ export class HomeComponent implements OnInit {
   public item4:string = "";
   @Input() list: ListComponent;
   
-  constructor(@Inject(Vision) private vision: Vision, @Inject(ListComponent) private ListComponent: ListComponent) {
+  constructor(@Inject(Vision) private vision: Vision, @Inject(ListComponent) private ListComponent: ListComponent, @Inject(ListServiceService) private ListServiceService: ListServiceService) {
 
   }
 
 
   ngOnInit() {
-    const object = this.ListComponent.getList();
+    const object = this.ListServiceService.currentList;
     console.log(object, 'fdsjhakfhdska')
-    this.item1 = object.item1
-    this.item2 = object.item2
-    this.item3 = object.item3
-    this.item4 = object.item4
+    this.item1 = object[0]
+    this.item2 = object[1]
+    this.item3 = object[2]
+    this.item4 = object[3]
   }
 
 

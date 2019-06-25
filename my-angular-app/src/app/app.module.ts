@@ -12,6 +12,7 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { Vision } from "./services/vision";
 import { ListComponent } from "./components/list/list.component";
 import { ProfileComponent } from "./components/profile/profile.component";
+import { NativeScriptFormsModule } from "nativescript-angular/forms"
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -32,6 +33,7 @@ import { ProfileComponent } from "./components/profile/profile.component";
         NativeScriptHttpModule,
         ReactiveFormsModule,
         FormsModule,
+        NativeScriptFormsModule,
     ],
     declarations: [
         HomeComponent,
