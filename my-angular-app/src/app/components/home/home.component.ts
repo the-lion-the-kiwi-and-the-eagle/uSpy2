@@ -63,30 +63,26 @@ export class HomeComponent implements OnInit {
           console.log(typeof this.imageDescription, 'hel;llllo')
           if(this.imageDescription.includes(this.item1)) {
             TNSFancyAlert.showSuccess(
-              "Success!",
               `You found the ${this.item1}!`,
-              "Keep Searching"
+              "Sweet!"
              );
             console.log('successssss');
           } else if(this.imageDescription.includes(this.item2)) {
             TNSFancyAlert.showSuccess(
-              "Success!",
               `You found the ${this.item2}!`,
-              "Keep Searching"
+              "Sweet!"
              );
             console.log('successssss');
           } else if(this.imageDescription.includes(this.item3)) {
             TNSFancyAlert.showSuccess(
-              "Success!",
               `You found the ${this.item3}!`,
-              "Keep Searching"
+              "Sweet!"
              );
             console.log('successssss');
           } else if(this.imageDescription.includes(this.item4)) {
             TNSFancyAlert.showSuccess(
-              "Success!",
               `You found the ${this.item4}!`,
-              "You won the game!"
+              "Sweet!"
              );
             console.log('succccesssss'); 
           } else {
