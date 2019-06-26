@@ -83,7 +83,8 @@ export class LoginComponent implements OnInit {
         }
       );
     } else {
-      this.LoginService.signUp(email, password).subscribe(
+      console.log({email, password}, 'this is signup')
+      this.LoginService.signUpFirebase(email, password).subscribe(
         resData => {
           this.isLoading = false;
           this.router.navigate(['/profile']);
@@ -93,6 +94,9 @@ export class LoginComponent implements OnInit {
           this.isLoading = false;
         }
       );
+      this.LoginService.signUp(email, password).subscribe((dbData) => {
+        console.log(dbData, 'this is the database data')
+      })
     }
   }
 
