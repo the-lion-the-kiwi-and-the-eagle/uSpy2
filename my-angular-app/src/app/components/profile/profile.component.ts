@@ -18,4 +18,9 @@ export class ProfileComponent implements OnInit {
   backButton() {
     this.router.navigate(['/list'])
   }
+
+  homeNav() {
+    this.router.navigate(['/home'])
+  }
+
 }
