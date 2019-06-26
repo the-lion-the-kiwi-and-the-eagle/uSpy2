@@ -9,14 +9,25 @@ export class LoginService {
     constructor(private http: HttpClient) {}
 
     signUp(email: string, password: string) {
-        console.log({email,password})
+        // console.log({email,password})
+        return this.http.post(`https://36572910.ngrok.io/user`,
+        {email: email, password: password}, {
+            headers: {
+                'accept': '*/*'
+            }
+        })
+    };
+
+    signUpFirebase(email: string, password: string) {
+        // console.log({email,password})
         return this.http.post(`https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${FIREBASE_API_KEY}`,
         {email: email, password: password, returnSecureToken: true}, {
             headers: {
                 'accept': '*/*'
             }
         })
-    }
+    };
+
     login(email: string, password: string) {
         return this.http.post(`https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${FIREBASE_API_KEY}`, {
             email: email, password: password, returnSecureToken: true
@@ -24,4 +35,5 @@ export class LoginService {
     }
 }
 
-
+// , password: password, returnSecureToken: true
+// `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${FIREBASE_API_KEY}`
