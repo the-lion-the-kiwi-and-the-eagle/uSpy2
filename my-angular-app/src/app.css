@@ -10,3 +10,15 @@ of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 */
 @import '~nativescript-theme-core/css/core.light.css';
+
+
+.bottom-navigation {
+    background-color:#54d4aa;
+}
+.bottom-navigation button {
+    width: 33.33%;
+    background-color:#54d4aa;
+    border-color: transparent;
+    border-width: 1;
+    color:white;
+}
