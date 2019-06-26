@@ -23,4 +23,8 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(['/home'])
   }
 
+  friendNav() {
+    this.router.navigate(['/friends']);
+  }
+
 }

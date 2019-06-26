@@ -2,7 +2,7 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { Observable } from "tns-core-modules/data/observable";
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ListServiceService } from './list-service.service';
-;
+
 
 @Component({
   selector: 'ns-list',
