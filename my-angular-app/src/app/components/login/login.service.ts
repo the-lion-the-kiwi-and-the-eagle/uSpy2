@@ -34,6 +34,3 @@ export class LoginService {
         });
     }
 }
-
-// , password: password, returnSecureToken: true
-// `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${FIREBASE_API_KEY}`
