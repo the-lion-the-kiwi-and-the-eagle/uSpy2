@@ -15,7 +15,7 @@ export class Vision {
     constructor (private http: Http) {}
         
 // send to server url from here as base64 script.
-    private googleVisionURL = "https://f34644f4.ngrok.io/image"; //"https://vision.googleapis.com/v1/images:annotate?key="
+    private googleVisionURL = "https://f4c47781.ngrok.io/image"; //"https://vision.googleapis.com/v1/images:annotate?key="
     
     private getImageAnnotations (base64Image: string): Promise<any> {
         let headers = new Headers({ 'Content-Type': 'application/json' });
