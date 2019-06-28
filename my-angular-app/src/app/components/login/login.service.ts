@@ -7,10 +7,11 @@ const FIREBASE_API_KEY = 'AIzaSyCyGI2wUsrwcrNexTgWe-xJwYzUJz-Zez4';
 @Injectable({ providedIn: 'root' })
 export class LoginService { 
     constructor(private http: HttpClient) {}
+    private userInfo = "https://1d9d864f.ngrok.io/user";
 
     signUp(email: string, password: string) {
         // console.log({email,password})
-        return this.http.post(`https://36572910.ngrok.io/user`,
+        return this.http.post(this.userInfo,
         {email: email, password: password}, {
             headers: {
                 'accept': '*/*'
