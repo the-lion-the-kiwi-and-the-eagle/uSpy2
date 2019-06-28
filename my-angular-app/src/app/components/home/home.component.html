@@ -1,12 +1,24 @@
 <ActionBar title="uSpy"></ActionBar>
-<StackLayout>
+<StackLayout class="main">
     <!-- <TextField hint="Items to find..." [text]="itemsToFind" autocorrect="false" (returnPress)="onReturn($event)" class="input input-border"></TextField>
     <Label class="h3 text-center" [text]="'The first item to find is: ' + firstTx" textWrap="true" marginBottom="25"></Label>
     <Button text="Enter item" (tap)="showAlert(firstTx)" class="btn btn-primary btn-active"></Button> -->
-    <Label [text]="item1"></Label>
-    <Label [text]="item2"></Label>
-    <Label [text]="item3"></Label>
-    <Label [text]="item4"></Label>
+    <FlexboxLayout class="item">
+        <Label [text]="item1" class="label"></Label> 
+        <AnimatedCircle rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle> 
+    </FlexboxLayout>
+    <FlexboxLayout class="item">
+        <Label [text]="item2" class="label"></Label>
+        <AnimatedCircle fillColor="#f54242" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+    </FlexboxLayout>
+    <FlexboxLayout class="item">
+        <Label [text]="item3" class="label"></Label>
+        <AnimatedCircle fillColor="#f54242" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+    </FlexboxLayout>
+    <FlexboxLayout class="item">
+        <Label [text]="item4" class="label"></Label>
+        <AnimatedCircle fillColor="#f54242" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+    </FlexboxLayout>
     <Image [src]="lastPicture" width="150" height="150"></Image>
     <Label [text]="imageDescription" textWrap="true" class="desc"></Label>
     <Button text="Open camera" class="btn btn-primary" (tap)=openCam()></Button>

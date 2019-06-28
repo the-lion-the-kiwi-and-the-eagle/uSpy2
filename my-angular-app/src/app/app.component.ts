@@ -10,10 +10,15 @@ export class AppComponent implements OnInit, OnDestroy {
     constructor(private socketIO:SocketIO) {}
 
     ngOnInit() {
-        this.socketIO.connect();
+        // if (this.socketIO) {
+        //     console.log(this.socketIO)
+        //     this.socketIO.disconnect();
+        // }
+        // this.socketIO.connect();
     }
 
     ngOnDestroy() {
-        this.socketIO.disconnect();
+        // console.log('disconnect?')
+        // this.socketIO.disconnect();
     }
 }

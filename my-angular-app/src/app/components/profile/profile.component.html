@@ -1,13 +1,13 @@
-<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+<StackLayout loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
     <DockLayout height="100%">
     <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
         <Button text="Home" (tap)="homeNav()"></Button>
-        <Button text="Create Game"></Button>
+        <Button text="Create Game" (tap)="createGame()"></Button>
         <Button text="Invite Friends" (tap)="friendNav()"></Button>
     </StackLayout>
     <Label dock="top"></Label>
     </DockLayout>
-</Page>
+</StackLayout>
 <StackLayout>
     <Label text="Sam's Profile" fontSize="32" textAlignment="center"></Label>
     <Image src="~/image/sam.jpg" width="200" height="200"  class="img-rounded p-1-15 p-r-15 p-t-15" stretch="none"></Image>

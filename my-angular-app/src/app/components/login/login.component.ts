@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { TextField } from 'tns-core-modules/ui/text-field';
-var SocketIO = require('nativescript-socketio').SocketIO;
-const server = "https://f4c47781.ngrok.io";
+const SocketIO = require('nativescript-socketio').SocketIO;
+const server = "https://0830078f.ngrok.io";
 
 
 import { LoginService } from './login.service';
@@ -40,10 +40,10 @@ export class LoginComponent implements OnInit {
     })
   });
   ngOnInit() {
-    this.socketIO = new SocketIO(server, {});
-    this.socketIO.on('login', zonedCallback((data) => {
-      this.router.navigate(['/profile', { credentials: this.credentials, socket: this.socketIO.instance }])
-    }));
+    // this.socketIO = new SocketIO(server, {});
+    // this.socketIO.on('login', zonedCallback((data) => {
+    //   this.router.navigate(['/profile', { credentials: this.credentials, socket: this.socketIO.instance }])
+    // }));
     //this could be a problem here. Its doing a form.get to email, but theres not value on intiation of app. 
     // const email = this.form.get('email').value;
     // const password = this.form.get('password').value;
