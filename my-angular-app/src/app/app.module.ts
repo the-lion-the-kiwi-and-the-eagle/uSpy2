@@ -17,7 +17,7 @@ import { FriendsComponent } from "./components/friends/friends.component";
 import { SocketIOModule } from "nativescript-socketio/angular";
 import { LobbyComponent } from "./components/lobby/lobby.component";
 import { registerElement } from "nativescript-angular/element-registry"
-var server = "https://0830078f.ngrok.io";
+var server = "https://75107dd7.ngrok.io";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";

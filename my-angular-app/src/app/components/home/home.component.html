@@ -5,19 +5,19 @@
     <Button text="Enter item" (tap)="showAlert(firstTx)" class="btn btn-primary btn-active"></Button> -->
     <FlexboxLayout class="item">
         <Label [text]="item1" class="label"></Label> 
-        <AnimatedCircle rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle> 
+        <AnimatedCircle *ngIf="isCorrect1" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
     </FlexboxLayout>
     <FlexboxLayout class="item">
         <Label [text]="item2" class="label"></Label>
-        <AnimatedCircle fillColor="#f54242" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+        <AnimatedCircle *ngIf="isCorrect2" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
     </FlexboxLayout>
     <FlexboxLayout class="item">
         <Label [text]="item3" class="label"></Label>
-        <AnimatedCircle fillColor="#f54242" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+        <AnimatedCircle *ngIf="isCorrect3" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
     </FlexboxLayout>
     <FlexboxLayout class="item">
         <Label [text]="item4" class="label"></Label>
-        <AnimatedCircle fillColor="#f54242" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+        <AnimatedCircle *ngIf="isCorrect4" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
     </FlexboxLayout>
     <Image [src]="lastPicture" width="150" height="150"></Image>
     <Label [text]="imageDescription" textWrap="true" class="desc"></Label>

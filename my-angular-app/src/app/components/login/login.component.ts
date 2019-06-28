@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { TextField } from 'tns-core-modules/ui/text-field';
 const SocketIO = require('nativescript-socketio').SocketIO;
-const server = "https://0830078f.ngrok.io";
+const server = "https://75107dd7.ngrok.io";
 
 
 import { LoginService } from './login.service';

@@ -17,6 +17,10 @@ import { ListComponent } from '../list/list.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public isCorrect1:boolean = false;
+  public isCorrect2:boolean = false;
+  public isCorrect3:boolean = false;
+  public isCorrect4:boolean = false;
   public lastPicture:any;
   public imageDescription:any;
   public firstTx: string = "";
@@ -41,6 +45,12 @@ export class HomeComponent implements OnInit {
     this.item4 = object[3]
   }
 
+  // onSwitch() {
+  //   if(this.imageDescription.includes(this.item1 || this.item2 || this.item3 || this.item4)) {
+  //     this.isCorrect = !this.isCorrect
+  //   }
+  // }
+
 
   public openCam() {
     camera.requestPermissions()
@@ -62,24 +72,28 @@ export class HomeComponent implements OnInit {
           this.imageDescription = evaluation.things;
           console.log(typeof this.imageDescription, 'hel;llllo')
           if(this.imageDescription.includes(this.item1)) {
+            this.isCorrect1 = true;
             TNSFancyAlert.showSuccess(
               `You found the ${this.item1}!`,
               "Sweet!"
              );
             console.log('successssss');
           } else if(this.imageDescription.includes(this.item2)) {
+            this.isCorrect2 = true;
             TNSFancyAlert.showSuccess(
               `You found the ${this.item2}!`,
               "Sweet!"
              );
             console.log('successssss');
           } else if(this.imageDescription.includes(this.item3)) {
+            this.isCorrect3 = true;
             TNSFancyAlert.showSuccess(
               `You found the ${this.item3}!`,
               "Sweet!"
              );
             console.log('successssss');
           } else if(this.imageDescription.includes(this.item4)) {
+            this.isCorrect4 = true;
             TNSFancyAlert.showSuccess(
               `You found the ${this.item4}!`,
               "Sweet!"
@@ -87,7 +101,7 @@ export class HomeComponent implements OnInit {
             console.log('succccesssss'); 
           } else {
             TNSFancyAlert.showError(
-              "You lost, try again!"
+              "Try again!"
              );
             console.log('you lost')
           }
