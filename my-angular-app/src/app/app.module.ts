@@ -17,6 +17,7 @@ import { FriendsComponent } from "./components/friends/friends.component";
 import { SocketIOModule } from "nativescript-socketio/angular";
 import { LobbyComponent } from "./components/lobby/lobby.component";
 import { registerElement } from "nativescript-angular/element-registry"
+import { WinnerComponent } from "./components/winner/winner.component";
 var server = "https://75107dd7.ngrok.io";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -52,6 +53,7 @@ registerElement('AnimatedCircle', () => require('nativescript-animated-circle').
         ProfileComponent,
         FriendsComponent,
         LobbyComponent,
+        WinnerComponent
     ],
     providers: [
         Vision

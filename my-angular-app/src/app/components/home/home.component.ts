@@ -45,13 +45,6 @@ export class HomeComponent implements OnInit {
     this.item4 = object[3]
   }
 
-  // onSwitch() {
-  //   if(this.imageDescription.includes(this.item1 || this.item2 || this.item3 || this.item4)) {
-  //     this.isCorrect = !this.isCorrect
-  //   }
-  // }
-
-
   public openCam() {
     camera.requestPermissions()
     .then(function success() {
