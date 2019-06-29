@@ -5,7 +5,7 @@ import * as imageSource from "tns-core-modules/image-source";
 import { TextField } from "tns-core-modules/ui/text-field";
 import { TNSFancyAlert } from 'nativescript-fancyalert';
 import { ListServiceService } from '../list/list-service.service'
-
+import { RouterExtensions } from 'nativescript-angular/router';
 
 import { Vision } from "../../services/vision";
 import { ImageFormat } from "tns-core-modules/ui/enums";
@@ -29,9 +29,10 @@ export class HomeComponent implements OnInit {
   public item2:string = "";
   public item3:string = "";
   public item4:string = "";
+  public count:number = 0;
   @Input() list: ListComponent;
   
-  constructor(@Inject(Vision) private vision: Vision, @Inject(ListComponent) private ListComponent: ListComponent, @Inject(ListServiceService) private ListServiceService: ListServiceService) {
+  constructor(private router: RouterExtensions, @Inject(Vision) private vision: Vision, @Inject(ListComponent) private ListComponent: ListComponent, @Inject(ListServiceService) private ListServiceService: ListServiceService) {
 
   }
 
@@ -44,6 +45,7 @@ export class HomeComponent implements OnInit {
     this.item3 = object[2]
     this.item4 = object[3]
   }
+  
 
   public openCam() {
     camera.requestPermissions()
@@ -65,34 +67,53 @@ export class HomeComponent implements OnInit {
           this.imageDescription = evaluation.things;
           console.log(typeof this.imageDescription, 'hel;llllo')
           if(this.imageDescription.includes(this.item1)) {
+            this.count++;
             this.isCorrect1 = true;
             TNSFancyAlert.showSuccess(
               `You found the ${this.item1}!`,
               "Sweet!"
              );
-            console.log('successssss');
+             if(this.count === 4) {
+               this.router.navigate(['/winner']);
+             }
+            console.log(this.count);
           } else if(this.imageDescription.includes(this.item2)) {
+            this.count++;
             this.isCorrect2 = true;
             TNSFancyAlert.showSuccess(
               `You found the ${this.item2}!`,
               "Sweet!"
              );
-            console.log('successssss');
+             if(this.count === 4) {
+              this.router.navigate(['/winner']);
+            }
+            console.log(this.count);
           } else if(this.imageDescription.includes(this.item3)) {
+            this.count++;
             this.isCorrect3 = true;
             TNSFancyAlert.showSuccess(
               `You found the ${this.item3}!`,
               "Sweet!"
              );
-            console.log('successssss');
+             if(this.count === 4) {
+              this.router.navigate(['/winner']);
+            }
+            console.log(this.count);
           } else if(this.imageDescription.includes(this.item4)) {
+            this.count++;
             this.isCorrect4 = true;
             TNSFancyAlert.showSuccess(
               `You found the ${this.item4}!`,
               "Sweet!"
              );
-            console.log('succccesssss'); 
-          } else {
+             if(this.count === 4) {
+              this.router.navigate(['/winner']);
+            }
+            console.log(this.count); 
+          } else if (this.count === 4) {
+            this.router.navigate(['/winner']);
+          } 
+          else {
             TNSFancyAlert.showError(
               "Try again!"
              );
