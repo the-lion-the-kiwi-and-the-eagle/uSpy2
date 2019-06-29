@@ -8,6 +8,7 @@ import { TextField } from 'tns-core-modules/ui/text-field';
 // import { FriendService } from './friends.service';
 import { FrameService } from 'nativescript-angular/platform-providers';
 import { FriendsService } from '../friends/friends.service';
+import { LoginService } from '../login/login.service'
 
 @Component({
   selector: 'ns-friends',
@@ -19,7 +20,7 @@ export class FriendsComponent implements OnInit {
     emailControlIsValid = true;
     @ViewChild('emailEl', {static: false}) emailEl: ElementRef<TextField>;
 
-  constructor(private router: RouterExtensions, private loginService: FrameService, private friendsService: FriendsService) { }
+  constructor(private router: RouterExtensions, private loginService: FrameService, private friendsService: FriendsService, private LoginService: LoginService) { }
   credentials = {
     email: "",
   }
@@ -40,7 +41,7 @@ export class FriendsComponent implements OnInit {
   onSubmit(arg) {
     //  console.log(this.credentials)
     const friendEmail = arg;
-    const userEmail = this.loginService.credentials.email;
+    const userEmail = this.LoginService.userEmail;
     this.emailControlIsValid = true;
       console.log(friendEmail, "{{{{{{{{{{")
       this.friendsService.inviteFriend(friendEmail, userEmail).subscribe(tasks =>{

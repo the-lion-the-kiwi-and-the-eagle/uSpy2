@@ -2,8 +2,9 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { TextField } from 'tns-core-modules/ui/text-field';
-
 import { LoginService } from './login.service';
+import { SocketIO } from 'nativescript-socketio/socketio';
+import { mainThreadify } from 'tns-core-modules/utils/utils';
 
 @Component({
   selector: 'ns-login',
@@ -12,6 +13,7 @@ import { LoginService } from './login.service';
   moduleId: module.id
 })
 export class LoginComponent implements OnInit {
+  
   // form: FormGroup;
   emailControlIsValid = true;
   passwordControlIsValid = true;
@@ -19,12 +21,13 @@ export class LoginComponent implements OnInit {
   isLoading = false;
   @ViewChild('passwordEl', {static: false}) passwordEl: ElementRef<TextField>;
   @ViewChild('emailEl', {static: false}) emailEl: ElementRef<TextField>;
-
-  constructor(private router: RouterExtensions, private LoginService: LoginService) {}
+  
+  constructor(private router: RouterExtensions, private LoginService: LoginService, private socketIO:SocketIO) {}
   credentials = {
     email: "",
     password: ""
   }
+  
   form = new FormGroup({
     email: new FormControl(null, {
       updateOn: 'blur',
@@ -36,6 +39,7 @@ export class LoginComponent implements OnInit {
     })
   });
   ngOnInit() {
+    // this.router.navigate(['/profile', { credentials: this.credentials }])
     
     //this could be a problem here. Its doing a form.get to email, but theres not value on intiation of app. 
     // const email = this.form.get('email').value;
@@ -53,28 +57,24 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     console.log('heyyyy')
     console.log(this.credentials)
-    // return;
-    // this.emailEl.nativeElement.focus();
-    // this.passwordEl.nativeElement.focus();
-    // this.passwordEl.nativeElement.dismissSoftInput();
-
-    // if (!this.form.valid) {
-    //   console.log('ooopsy')
-    //   return;
-    // }
-
-    // const email = this.form.get('email').value;
-    // const password = this.form.get('password').value;
-    // this.form.reset();
+    // Create socket connection when user logs in or signs up
+    this.socketIO.connect();
+    // send users email to backend when socket created
+    this.socketIO.on('user', (data) => {
+      this.socketIO.emit('user', (this.credentials));
+    })
+   
+    
     const { email, password } = this.credentials;
     this.emailControlIsValid = true;
     this.passwordControlIsValid = true;
     this.isLoading = true;
     if (this.isLogin) {
-      console.log({email, password})
+      // console.log({email, password})
       this.LoginService.login(email, password).subscribe(
         resData => {
           this.isLoading = false;
+          this.LoginService.emailSaved(email);
           this.router.navigate(['/profile']);
         },
         err => {
@@ -86,6 +86,7 @@ export class LoginComponent implements OnInit {
       console.log({email, password}, 'this is signup')
       this.LoginService.signUpFirebase(email, password).subscribe(
         resData => {
+          this.LoginService.emailSaved(email);
           this.isLoading = false;
           this.router.navigate(['/profile']);
         },
@@ -97,6 +98,7 @@ export class LoginComponent implements OnInit {
       this.LoginService.signUp(email, password).subscribe((dbData) => {
         console.log(dbData, 'this is the database data')
       })
+
     }
   }
 
@@ -104,6 +106,7 @@ export class LoginComponent implements OnInit {
     this.emailEl.nativeElement.focus();
     this.passwordEl.nativeElement.focus();
     this.passwordEl.nativeElement.dismissSoftInput();
+   
   }
 
   onSwitch() {

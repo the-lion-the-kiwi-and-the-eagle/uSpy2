@@ -3,14 +3,14 @@ import { HttpClient } from '@angular/common/http';
 
 
 const FIREBASE_API_KEY = 'AIzaSyCyGI2wUsrwcrNexTgWe-xJwYzUJz-Zez4';
-
 @Injectable({ providedIn: 'root' })
 export class LoginService { 
+    public userEmail;
     constructor(private http: HttpClient) {}
-    private userInfo = "https://1d9d864f.ngrok.io/user";
+    private userInfo = "https://c66a1dd4.ngrok.io/user";
 
     signUp(email: string, password: string) {
-        // console.log({email,password})
+        console.log(this.userEmail)
         return this.http.post(this.userInfo,
         {email: email, password: password}, {
             headers: {
@@ -33,5 +33,9 @@ export class LoginService {
         return this.http.post(`https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${FIREBASE_API_KEY}`, {
             email: email, password: password, returnSecureToken: true
         });
+    }
+
+    emailSaved(email: string) {
+        this.userEmail = email;
     }
 }
