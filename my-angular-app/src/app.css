@@ -13,11 +13,11 @@ refer to http://docs.nativescript.org/ui/theme.
 
 
 .bottom-navigation {
-    background-color:#54d4aa;
+    background-color: #5BC0EB;
 }
 .bottom-navigation button {
     width: 33.33%;
-    background-color:#54d4aa;
+    background-color:#9BC53D;
     border-color: transparent;
     border-width: 1;
     color:white;
