@@ -10,7 +10,7 @@ export class LoginService {
 
     signUp(email: string, password: string) {
         // console.log({email,password})
-        return this.http.post(`https://287415e0.ngrok.io/user`,
+        return this.http.post(`https://1552262b.ngrok.io/user`,
         {email: email, password: password}, {
             headers: {
                 'accept': '*/*'
