@@ -22,6 +22,7 @@
     <Image [src]="lastPicture" width="150" height="150"></Image>
     <Label [text]="imageDescription" textWrap="true" class="desc"></Label>
     <Button text="Open camera" class="btn btn-primary" (tap)=openCam()></Button>
+    <Button text="End game" class="btn btn-primary" (tap)=endGame()></Button>
     <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
 </StackLayout>
 

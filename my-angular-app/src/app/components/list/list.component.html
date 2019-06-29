@@ -1,23 +1,28 @@
-<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
-    <DockLayout height="100%">
-    <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
-        <Button text="Profile" (tap)="profileNav()"></Button>
-        <Button text="Create Game"></Button>
-        <Button text="Friends"></Button>
-    </StackLayout>
-    <Label dock="top"></Label>
-    </DockLayout>
-</Page>
 <StackLayout>
     <StackLayout>
-        <RadDataForm [source]="list"></RadDataForm>
+        <StackLayout>
+            <RadDataForm [source]="list"></RadDataForm>
+        </StackLayout>
+        <StackLayout>
+            <Button text="Save and Play!" class="btn btn-primary" (tap)="onSubmit()"></Button>
+        </StackLayout>
+        <StackLayout>
+            <Button text="Profile" class="btn btn-primary" (tap)="navigateProfile()"></Button>
+        </StackLayout>
     </StackLayout>
-    <StackLayout>
-        <Button text="Save and Play!" class="btn btn-primary" (tap)="onSubmit()"></Button>
+    <StackLayout loaded="StackLayoutLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+        <DockLayout height="100%">
+        <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
+            <Button text="Profile" (tap)="profileNav()"></Button>
+            <Button text="Create Game" ></Button>
+            <Button text="Friends"></Button>
+        </StackLayout>
+        <Label dock="top"></Label>
+        </DockLayout>
     </StackLayout>
-    <StackLayout>
-        <Button text="Profile" class="btn btn-primary" (tap)="navigateProfile()"></Button>
-    </StackLayout>
+
+
+
 </StackLayout>
 <!-- <navigation:ExamplePage xmlns:navigation="navigation/example-page" loaded="onPageLoaded"
     xmlns:df="nativescript-ui-dataform" xmlns="http://www.nativescript.org/tns.xsd">

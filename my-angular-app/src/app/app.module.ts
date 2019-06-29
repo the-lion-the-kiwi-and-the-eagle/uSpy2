@@ -56,7 +56,9 @@ registerElement('AnimatedCircle', () => require('nativescript-animated-circle').
         WinnerComponent
     ],
     providers: [
-        Vision
+        Vision,
+        LoginComponent,
+        
     ],
     schemas: [
         NO_ERRORS_SCHEMA

@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     })
   });
   ngOnInit() {
-    // this.router.navigate(['/profile', { credentials: this.credentials }])
+    //this.router.navigate(['/profile', { credentials: this.credentials }])
     
     //this could be a problem here. Its doing a form.get to email, but theres not value on intiation of app. 
     // const email = this.form.get('email').value;

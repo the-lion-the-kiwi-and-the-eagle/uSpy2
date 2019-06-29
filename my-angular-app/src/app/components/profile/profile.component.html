@@ -1,23 +1,23 @@
-<StackLayout loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
-    <DockLayout height="100%">
-    <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
-        <Button text="Home" (tap)="homeNav()"></Button>
-        <Button text="Create Game" (tap)="createGame()"></Button>
-        <Button text="Invite Friends" (tap)="friendNav()"></Button>
-    </StackLayout>
-    <Label dock="top"></Label>
-    </DockLayout>
-</StackLayout>
 <StackLayout>
-    <Label text="Sam's Profile" fontSize="32" textAlignment="center"></Label>
-    <Image src="~/image/sam.jpg" width="200" height="200"  class="img-rounded p-1-15 p-r-15 p-t-15" stretch="none"></Image>
-    <StackLayout>
-        <Label text="Sam's Friends: Chris, Kyle, Harvey" fontSize="24" textAlignment="center" fontAttributes="Bold"></Label>
-    </StackLayout>
-    <StackLayout>
-            <Label text="Win Streak: 13" textAlignment="center" fontSize="24" fontAttributes="Bold"></Label>
-    </StackLayout>
-    <StackLayout>
-            <Button text="Back" class="btn btn-primary" (tap)="backButton()"></Button>
+    <StackLayout loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
+        <StackLayout>
+            <Label text="Sam's Profile" fontSize="32" textAlignment="center"></Label>
+            <Image src="~/image/sam.jpg" width="200" height="200"  class="img-rounded p-1-15 p-r-15 p-t-15" ></Image>
+            
+            <StackLayout>
+                    <Label text="Win Streak: 13" textAlignment="center" fontSize="24" fontAttributes="Bold"></Label>
+            </StackLayout>
+            <StackLayout>
+                    <Button text="Back" class="btn btn-primary" (tap)="backButton()"></Button>
+            </StackLayout>
+        </StackLayout>
+        <DockLayout height="100%">
+        <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
+            <Button text="Home" (tap)="homeNav()"></Button>
+            <Button text="Create Game" (tap)=createGame()></Button>
+            <Button text="Invite Friends" (tap)="friendNav()"></Button>
+        </StackLayout>
+        <Label dock="top"></Label>
+        </DockLayout>
     </StackLayout>
 </StackLayout>
