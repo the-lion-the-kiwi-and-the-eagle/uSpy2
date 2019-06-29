@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterExtensions } from 'nativescript-angular/router';
+import { SocketIO } from "nativescript-socketio/socketio";
 
 @Component({
   selector: 'ns-profile',
@@ -8,7 +9,7 @@ import { RouterExtensions } from 'nativescript-angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private router: RouterExtensions) { }
+  constructor(private router: RouterExtensions, private socketIO:SocketIO) { }
 
   ngOnInit() {
   }
@@ -27,4 +28,9 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(['/friends']);
   }
 
+  createGame() {
+    this.socketIO.connect();
+    this.router.navigate(['/list']);
+    console.log('this is gonna work!!!!!!')
+  }
 }
