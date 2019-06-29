@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterExtensions } from 'nativescript-angular/router';
+import { FriendsService } from '../friends/friends.service';
 
 @Component({
   selector: 'ns-profile',
@@ -8,7 +9,7 @@ import { RouterExtensions } from 'nativescript-angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private router: RouterExtensions) { }
+  constructor(private router: RouterExtensions, public friendsService: FriendsService) { }
 
   ngOnInit() {
   }
