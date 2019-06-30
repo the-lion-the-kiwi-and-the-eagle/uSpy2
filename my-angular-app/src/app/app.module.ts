@@ -15,13 +15,19 @@ import { ProfileComponent } from "./components/profile/profile.component";
 import { NativeScriptFormsModule } from "nativescript-angular/forms"
 import { FriendsComponent } from "./components/friends/friends.component";
 import { SocketIOModule } from "nativescript-socketio/angular";
-var server = "https://f4c47781.ngrok.io";
+import { LobbyComponent } from "./components/lobby/lobby.component";
+import { registerElement } from "nativescript-angular/element-registry"
+import { WinnerComponent } from "./components/winner/winner.component";
+var server = "https://287415e0.ngrok.io";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 // import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
+
+registerElement('AnimatedCircle', () => require('nativescript-animated-circle').AnimatedCircle);
+
 
 @NgModule({
     bootstrap: [
@@ -46,9 +52,13 @@ var server = "https://f4c47781.ngrok.io";
         ListComponent,
         ProfileComponent,
         FriendsComponent,
+        LobbyComponent,
+        WinnerComponent
     ],
     providers: [
-        Vision
+        Vision,
+        LoginComponent,
+        
     ],
     schemas: [
         NO_ERRORS_SCHEMA
