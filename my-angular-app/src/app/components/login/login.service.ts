@@ -38,8 +38,4 @@ export class LoginService {
     emailSaved(email: string) {
         this.userEmail = email;
     }
-
-    profilePicture() {
-        this.profilePic = "danny.jpg"
-    }
 }
