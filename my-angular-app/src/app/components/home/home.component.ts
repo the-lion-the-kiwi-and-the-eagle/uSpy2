@@ -5,11 +5,11 @@ import * as imageSource from "tns-core-modules/image-source";
 import { TextField } from "tns-core-modules/ui/text-field";
 import { TNSFancyAlert } from 'nativescript-fancyalert';
 import { ListServiceService } from '../list/list-service.service'
-import { RouterExtensions } from 'nativescript-angular/router';
-
+import { SocketIO } from "nativescript-socketio/socketio";
 import { Vision } from "../../services/vision";
 import { ImageFormat } from "tns-core-modules/ui/enums";
 import { ListComponent } from '../list/list.component';
+import { RouterExtensions } from 'nativescript-angular/router';
 
 @Component({
   selector: 'ns-home',
@@ -32,20 +32,27 @@ export class HomeComponent implements OnInit {
   public count:number = 0;
   @Input() list: ListComponent;
   
-  constructor(private router: RouterExtensions, @Inject(Vision) private vision: Vision, @Inject(ListComponent) private ListComponent: ListComponent, @Inject(ListServiceService) private ListServiceService: ListServiceService) {
-
-  }
+  constructor(
+  @Inject(Vision) private vision: Vision, 
+  @Inject(ListComponent) private ListComponent: ListComponent, 
+  @Inject(ListServiceService) private ListServiceService: ListServiceService, 
+  private socketIO:SocketIO,
+  private router: RouterExtensions
+  ) {}
 
 
   ngOnInit() {
     const object = this.ListServiceService.currentList;
-    console.log(object, 'fdsjhakfhdska')
+    console.log(object)
     this.item1 = object[0]
     this.item2 = object[1]
     this.item3 = object[2]
     this.item4 = object[3]
   }
-  
+  endGame() {
+    this.socketIO.disconnect();
+    this.router.navigate(['/profile'])
+  }
 
   public openCam() {
     camera.requestPermissions()
