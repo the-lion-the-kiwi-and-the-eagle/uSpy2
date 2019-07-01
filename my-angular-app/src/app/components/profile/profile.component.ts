@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable, Input } from '@angular/core';
 import { RouterExtensions } from 'nativescript-angular/router';
+import { FriendsService } from '../friends/friends.service';
 import { SocketIO } from 'nativescript-socketio/socketio';
 import { LoginComponent } from '../login/login.component';
 import { ActivatedRoute, Router } from '@angular/router';

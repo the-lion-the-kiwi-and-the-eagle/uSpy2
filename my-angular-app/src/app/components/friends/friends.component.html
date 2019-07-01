@@ -1,4 +1,9 @@
 <StackLayout>
-    
-    <Button text="send invite!" class="btn btn-primary"></Button>
+    <TextField ngModel #friendEmailCtrl="ngModel" class="input" returnKeyType="done" [autocorrect]="false" hint="FRIENDS EMAIL" (returnPress)="onReturnPress($event)"></TextField>
+    <Button text="INVITE FRIENDS!" class="btn btn-primary" class="btn btn-primary btn-rounded-sm" (tap)="onSubmit(friendEmailCtrl.value)"></Button>
+    <Label [text]="friendEmailCtrl.value"></Label>
 </StackLayout>
+
+<!-- <TextField (textChange)="friendsService.emailOnChange(friendEmailCtrl.value)"ngModel #friendEmailCtrl="ngModel" class="input" returnKeyType="done" [autocorrect]="false" autocapitalizationType="none" hint="FRIENDS EMAIL" (returnPress)="onReturnPress($event)"></TextField>
+    <Button text="INVITE FRIENDS!" class="btn btn-primary" (tap)="friendsService.handleSubmit()"></Button>
+    <Label [text]="friendEmailCtrl.value"></Label> -->

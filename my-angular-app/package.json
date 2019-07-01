@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.myangularuspyapp",
+    "id": "org.nativescript.myangularapp",
     "tns-android": {
       "version": "5.4.0"
     },
