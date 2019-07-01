@@ -7,10 +7,11 @@ const FIREBASE_API_KEY = 'AIzaSyCyGI2wUsrwcrNexTgWe-xJwYzUJz-Zez4';
 export class LoginService { 
     public userEmail;
     constructor(private http: HttpClient) {}
+    private userInfo = "https://c66a1dd4.ngrok.io/user";
 
     signUp(email: string, password: string) {
-        // console.log({email,password})
-        return this.http.post(`https://1552262b.ngrok.io/user`,
+        console.log(this.userEmail)
+        return this.http.post(this.userInfo,
         {email: email, password: password}, {
             headers: {
                 'accept': '*/*'
