@@ -61,6 +61,7 @@ export class LoginComponent implements OnInit {
     this.socketIO.connect();
     // send users email to backend when socket created
     this.socketIO.on('user', (data) => {
+      console.log(data);
       this.socketIO.emit('user', (this.credentials));
     })
    

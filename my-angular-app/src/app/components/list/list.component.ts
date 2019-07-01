@@ -31,7 +31,7 @@ export class ListComponent extends Observable {
 
   onSubmit() {
     this.listService.itemChange(this.list)
-    this.router.navigate(['/lobby']);
+    this.router.navigate(['/home']);
     console.log(this.list);
     // return this.get()
   }
