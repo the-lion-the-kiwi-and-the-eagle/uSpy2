@@ -5,8 +5,6 @@ import { LoginComponent } from '../login/login.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from '../login/login.service';
 
-
-
 @Component({
   selector: 'ns-profile',
   templateUrl: './profile.component.html',
@@ -14,15 +12,14 @@ import { LoginService } from '../login/login.service';
 })
 @Injectable({ providedIn: 'root' })
 export class ProfileComponent implements OnInit {
+  public profilePics:Array<string> = ["Kramer.jpg", "danny.jpg", "michael.png", "peter.png", "stewie.png"]
 
+  public profilePic:string = this.profilePics[Math.floor(Math.random() * this.profilePics.length)]
   constructor(private router: Router, private socketIO:SocketIO, private LoginService: LoginService) { }
 
   ngOnInit() {
-    
-    // console.log(this.LoginService.userEmail);
+    this.LoginService.profilePic
   }
-  
-  
   
   
   backButton() {
@@ -37,7 +34,6 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(['/friends']);
   }
   createGame() {
- 
     this.socketIO.emit('create game', this.LoginService.userEmail) //need to emit the user who created the game's email.
     this.router.navigate(['/lobby'])
   }

@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 const FIREBASE_API_KEY = 'AIzaSyCyGI2wUsrwcrNexTgWe-xJwYzUJz-Zez4';
 @Injectable({ providedIn: 'root' })
 export class LoginService { 
+    public profilePic;
     public userEmail;
     constructor(private http: HttpClient) {}
 
@@ -36,5 +37,9 @@ export class LoginService {
 
     emailSaved(email: string) {
         this.userEmail = email;
+    }
+
+    profilePicture() {
+        this.profilePic = "danny.jpg"
     }
 }
