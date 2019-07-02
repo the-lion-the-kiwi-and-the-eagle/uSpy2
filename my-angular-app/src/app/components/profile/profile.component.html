@@ -1,14 +1,13 @@
 <StackLayout>
     <StackLayout loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
         <StackLayout>
-            <Label text="{{LoginService.userEmail}} Profile" fontSize="32" textAlignment="center"></Label>
-            <Image src="{{'~/image/' + profilePic}}" width="275" borderRadius="200" height="250" ></Image>
+            <Label text="{{LoginService.userEmail}}" textAlignment="center" class="name"></Label>
+            <StackLayout>
+                <Image src="{{'~/image/' + profilePic}}" width="275" borderRadius="200" height="250" class="picture"></Image>
+            </StackLayout>
             
             <StackLayout>
                     <Label text="Win Streak: 13" textAlignment="center" fontSize="24" fontAttributes="Bold"></Label>
-            </StackLayout>
-            <StackLayout>
-                    <Button text="Back" class="btn btn-primary" (tap)="backButton()"></Button>
             </StackLayout>
         </StackLayout>
         <DockLayout height="100%">

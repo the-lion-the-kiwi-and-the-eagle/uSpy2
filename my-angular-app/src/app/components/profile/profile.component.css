@@ -1,0 +1,17 @@
+.name {
+    font-family: Open sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+    line-height: 49px;
+    display: flex;
+    color: #000000;
+    word-wrap: normal;
+}
+
+.picture {
+    position: absolute;
+    align-content: center;
+}
