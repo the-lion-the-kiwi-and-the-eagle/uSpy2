@@ -2,6 +2,7 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { Observable } from "tns-core-modules/data/observable";
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ListServiceService } from './list-service.service';
+import { LoginService } from '../login/login.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { ListServiceService } from './list-service.service';
 })
 @Injectable({ providedIn: 'root' })
 export class ListComponent extends Observable {
-  constructor(private router: RouterExtensions, private listService: ListServiceService) { 
+  constructor(private router: RouterExtensions, private listService: ListServiceService, private LoginService: LoginService) { 
     super();
     this.list = new Items(null, null, null, null);
   }
@@ -31,7 +32,7 @@ export class ListComponent extends Observable {
 
   onSubmit() {
     this.listService.itemChange(this.list)
-    this.router.navigate(['/lobby']);
+    this.router.navigate([`/home/${this.LoginService.userEmail}`]);
     console.log(this.list);
     // return this.get()
   }
