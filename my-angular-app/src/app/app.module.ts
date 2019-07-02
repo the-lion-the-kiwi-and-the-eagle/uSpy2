@@ -25,7 +25,7 @@ var server = "https://1552262b.ngrok.io";
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 // import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
-
+// registerElement('Card:CardView', () => require('nativescript-cardview').Card);
 registerElement('AnimatedCircle', () => require('nativescript-animated-circle').AnimatedCircle);
 
 
