@@ -1,8 +1,8 @@
 <StackLayout>
     <StackLayout loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
         <StackLayout>
-            <Label text="Sam's Profile" fontSize="32" textAlignment="center"></Label>
-            <Image src="~/image/sam.jpg" width="200" height="200"  class="img-rounded p-1-15 p-r-15 p-t-15" ></Image>
+            <Label text="{{LoginService.userEmail}} Profile" fontSize="32" textAlignment="center"></Label>
+            <Image src="{{'~/image/' + profilePic}}" width="275" borderRadius="200" height="250" ></Image>
             
             <StackLayout>
                     <Label text="Win Streak: 13" textAlignment="center" fontSize="24" fontAttributes="Bold"></Label>
@@ -15,7 +15,7 @@
         <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
             <Button text="Lobby" (tap)="lobbyNav()"></Button>
             <Button text="Create Game" (tap)=createGame()></Button>
-            <Button text="Invite Friends" (tap)="friendNav()"></Button>
+            <Button text="Friends" (tap)="friendNav()"></Button>
         </StackLayout>
         <Label dock="top"></Label>
         </DockLayout>

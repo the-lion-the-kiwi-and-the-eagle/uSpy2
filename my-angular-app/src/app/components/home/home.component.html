@@ -3,7 +3,7 @@
 <StackLayout>
     <GridLayout rows="*" columns="*" class="item">
         <StackLayout>
-            <Label text="YOU" fontSize="32"></Label>
+            <Label text="{{LoginService.userEmail}}" fontSize="32"></Label>
             <Label [text]="item1" class="label" fontSize="20"></Label> 
             <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect1" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <Label [text]="item2" class="label" fontSize="20"></Label> 
@@ -14,7 +14,7 @@
             <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect4" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
         </StackLayout>
         <StackLayout>
-            <Label text="THEM" fontSize="32" horizontalAlignment="center" ></Label>
+            <Label text="Enemy" fontSize="32" horizontalAlignment="center" ></Label>
             <Label  horizontalAlignment="center" [text]="item5" class="label" fontSize="20"></Label>
             <AnimatedCircle  horizontalAlignment="center" *ngIf="isCorrect5" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <Label  horizontalAlignment="center" [text]="item6" class="label" fontSize="20"></Label> 
@@ -38,4 +38,14 @@
        </GridLayout>
     </StackLayout> 
 </StackLayout>
+
+<!-- <ActionBar title="uSpy"></ActionBar>
+<StackLayout>
+    <Card:CardView class="cardStyle">
+        <StackLayout class="cardContent">
+            <Label [text]="item1" class="label"></Label>
+            <AnimatedCircle *ngIf="isCorrect1" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+        </StackLayout>
+    </Card:CardView>
+</StackLayout> -->
 

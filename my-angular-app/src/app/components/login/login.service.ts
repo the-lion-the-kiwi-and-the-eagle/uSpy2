@@ -5,9 +5,10 @@ import { HttpClient } from '@angular/common/http';
 const FIREBASE_API_KEY = 'AIzaSyCyGI2wUsrwcrNexTgWe-xJwYzUJz-Zez4';
 @Injectable({ providedIn: 'root' })
 export class LoginService { 
+    public profilePic;
     public userEmail;
     constructor(private http: HttpClient) {}
-    private userInfo = "https://c66a1dd4.ngrok.io/user";
+    private userInfo = "https://1552262b.ngrok.io/user";
 
     signUp(email: string, password: string) {
         console.log(this.userEmail)
