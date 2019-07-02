@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({ providedIn: 'root' })
 export class FriendsService { 
     constructor(private http: HttpClient) {}
-    private ngrok = "https://c66a1dd4.ngrok.io/friend";
+    private ngrok = "https://df8a40db.ngrok.io/friend";
     // newInvite: string;
     // currentInvite = [];
 
@@ -19,6 +19,14 @@ export class FriendsService {
                     'accept': '*/*'
                 }
             })
+    }
+    getFriends(userEmail: string){
+        return this.http.post("https://df8a40db.ngrok.io/friends",
+            {userEmail: userEmail}, {
+                headers: {
+                'accept': '*/*'
+                }
+        })
     }
 
 }
