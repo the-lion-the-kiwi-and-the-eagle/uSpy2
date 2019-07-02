@@ -1,18 +1,7 @@
 <StackLayout>
-    <StackLayout>
-        <Button text="start game" class="btn btn-primary" (tap)="startGame()"></Button>
-        <Button text="lobby works!" class="btn btn-primary"></Button>
-        <Button text="show games" class="btn btn-primary" (tap)="showGames()"></Button>
-    </StackLayout>
-    <StackLayout>
-        <Label [text]="test"></Label>
-        <Label [text]="games | json"></Label>
-        <Label [text]="games.length"></Label>
-    </StackLayout>
     <StackLayout *ngFor="let game of games" class='list-games'>
-        <Label [text]="game"></Label>
-        <Button text="join game"></Button>
-        
+        <Label [text]="game + ' ' + joinGame" class="game"></Label>
+        <Button text="join game" class="gameCount" (tap)="routeToGame(game)"></Button>
     </StackLayout>
-
 </StackLayout>
+    

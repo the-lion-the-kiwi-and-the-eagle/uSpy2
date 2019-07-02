@@ -16,7 +16,7 @@ export class ListServiceService {
 
   itemChange(obj) {
     this.currentList.push(obj.item1, obj.item2, obj.item3, obj.item4)
-    console.log(this.currentList, 'helllllllo')
+    
   }
 
 }

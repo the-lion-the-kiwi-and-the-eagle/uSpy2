@@ -8,10 +8,11 @@ export class LoginService {
     public profilePic;
     public userEmail;
     constructor(private http: HttpClient) {}
+    private userInfo = "https://1552262b.ngrok.io/user";
 
     signUp(email: string, password: string) {
-        // console.log({email,password})
-        return this.http.post(`https://aa755680.ngrok.io/user`,
+        console.log(this.userEmail)
+        return this.http.post(this.userInfo,
         {email: email, password: password}, {
             headers: {
                 'accept': '*/*'

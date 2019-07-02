@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable, Input } from '@angular/core';
 import { RouterExtensions } from 'nativescript-angular/router';
+import { FriendsService } from '../friends/friends.service';
 import { SocketIO } from 'nativescript-socketio/socketio';
 import { LoginComponent } from '../login/login.component';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -26,8 +27,8 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(['/list'])
   }
   
-  homeNav() {
-    this.router.navigate(['/home'])
+  lobbyNav() {
+    this.router.navigate(['/lobby'])
   }
   
   friendNav() {
@@ -35,7 +36,7 @@ export class ProfileComponent implements OnInit {
   }
   createGame() {
     this.socketIO.emit('create game', this.LoginService.userEmail) //need to emit the user who created the game's email.
-    this.router.navigate(['/lobby'])
+    this.router.navigate(['/list'])
   }
 
 
