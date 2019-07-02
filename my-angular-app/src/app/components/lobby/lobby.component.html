@@ -1,6 +1,9 @@
 <StackLayout>
+    <StackLayoyt>
+        <Label text="LOBBY" horizontalAlignment="center" fontSize="32"></Label>
+    </StackLayoyt>
     <StackLayout *ngFor="let game of games" class='list-games'>
-        <Label [text]="game + ' ' + joinGame" class="game"></Label>
+        <Label horizontalAlignment="center" [text]="game + ' ' + joinGame" class="game"></Label>
         <Button text="join game" class="gameCount" (tap)="routeToGame(game)"></Button>
     </StackLayout>
 </StackLayout>
