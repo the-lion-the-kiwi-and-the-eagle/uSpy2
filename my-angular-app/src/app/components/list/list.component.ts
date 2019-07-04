@@ -50,6 +50,10 @@ export class ListComponent extends Observable {
     return this.get("_list");
   }
 
+  logoutNav() {
+    this.router.navigate(['/""'])
+  }
+
   ngOnInit() {
     
   }

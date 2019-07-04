@@ -19,9 +19,6 @@ const routes: Routes = [
     { path: "friends", component: FriendsComponent },
     { path: "lobby", component: LobbyComponent },
     { path: "winner", component: WinnerComponent },
-    // { path: "", redirectTo: "/items", pathMatch: "full" },
-    // { path: "items", component: ItemsComponent },
-    // { path: "item/:id", component: ItemDetailComponent }
 ];
 
 @NgModule({

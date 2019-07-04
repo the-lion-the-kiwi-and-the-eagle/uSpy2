@@ -44,6 +44,8 @@ export class ProfileComponent implements OnInit {
     console.log(this.FriendsService.getFriends);
 
   }
+
+
   createGame() {
     this.socketIO.emit('create game', this.LoginService.userEmail) //need to emit the user who created the game's email.
     this.router.navigate(['/list'])
