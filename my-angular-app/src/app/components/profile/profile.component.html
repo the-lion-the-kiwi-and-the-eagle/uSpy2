@@ -15,7 +15,7 @@
         <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
             <Button text="Lobby" (tap)="lobbyNav()"></Button>
             <Button text="Create Game" (tap)=createGame()></Button>
-            <Button text="Friends" (tap)="friendNav()"></Button>
+            <Button text="Friends" (tap)="friendNav()" (tap)="onSubmit()"></Button>
         </StackLayout>
         <Label dock="top"></Label>
         </DockLayout>
