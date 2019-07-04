@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Inject, Input, ChangeDetectorRef, NgZone } from '@angular/core';
 import * as camera from "nativescript-camera";
 import { Image } from "tns-core-modules/ui/image";
 import * as imageSource from "tns-core-modules/image-source";
@@ -49,7 +49,8 @@ export class HomeComponent implements OnInit {
   @Inject(LoginService) private LoginService: LoginService, 
   private socketIO:SocketIO,
   private router: RouterExtensions,
-  private ref: ChangeDetectorRef
+  private ref: ChangeDetectorRef,
+  private ngZone: NgZone,
   ) {}
 
 
@@ -106,7 +107,7 @@ export class HomeComponent implements OnInit {
     })
     this.socketIO.on('finish', (message) => {
       console.log(message);
-      this.router.navigate(['/winner']);
+      this.ngZone.run(() => this.router.navigate(['/winner']).then());
     })
   }
   endGame() {
