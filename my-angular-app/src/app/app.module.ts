@@ -19,6 +19,7 @@ import { LobbyComponent } from "./components/lobby/lobby.component";
 import { registerElement } from "nativescript-angular/element-registry"
 import { WinnerComponent } from "./components/winner/winner.component";
 import { CardView } from "nativescript-cardview";
+
 var server = "https://1552262b.ngrok.io";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -29,6 +30,7 @@ var server = "https://1552262b.ngrok.io";
 // registerElement('Card:CardView', () => require('nativescript-cardview').Card);
 registerElement('AnimatedCircle', () => require('nativescript-animated-circle').AnimatedCircle);
 registerElement('CardView', () => CardView);
+registerElement("Gradient", () => require("nativescript-gradient").Gradient);
 
 @NgModule({
     bootstrap: [

@@ -12,7 +12,7 @@ import { LobbyComponent } from "./components/lobby/lobby.component";
 import { WinnerComponent } from "./components/winner/winner.component";
 
 const routes: Routes = [
-    { path: "", component: WinnerComponent },
+    { path: "", component: LoginComponent },
     { path: "list", component: ListComponent },
     { path: "home/:id", component: HomeComponent },
     { path: "profile", component: ProfileComponent },

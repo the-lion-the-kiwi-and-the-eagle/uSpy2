@@ -9,7 +9,7 @@
     border: solid;
 } */
 
-StackLayout {
+/* StackLayout {
     border-color: red;
     border-width: 3;
     border-radius: 30;
@@ -19,7 +19,7 @@ RadListView {
     border-color: red;
     border-width: 3;
     border-radius: 30;
-}
+} */
 
 .label {
     font-family: Arial, Helvetica, sans-serif;
