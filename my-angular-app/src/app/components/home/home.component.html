@@ -6,31 +6,23 @@
             <Label text="{{LoginService.userEmail}}" fontSize="22"></Label>
             <Label [text]="item1" class="label" fontSize="30"></Label> 
             <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect1" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            <AnimatedCircle horizontalAlignment="center" *ngIf="isCorrect5" rimColor="#00cc00" fillColor="#FFA500" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect9" rimColor="#00cc00" fillColor="#FFFF00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <Label [text]="item2" class="label" fontSize="30"></Label> 
             <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect2" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            <AnimatedCircle horizontalAlignment="center" *ngIf="isCorrect6" rimColor="#00cc00" fillColor="#FFA500" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect10" rimColor="#00cc00" fillColor="#FFFF00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <Label [text]="item3" class="label" fontSize="30"></Label>
             <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect3" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            <AnimatedCircle horizontalAlignment="center" *ngIf="isCorrect7" rimColor="#00cc00" fillColor="#FFA500" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect11" rimColor="#00cc00" fillColor="#FFFF00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <Label [text]="item4" class="label" fontSize="30"></Label> 
             <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect4" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-        </StackLayout>
-        <StackLayout>
-            <Label text="Enemy" fontSize="22" horizontalAlignment="center" ></Label>
-            <Label  horizontalAlignment="center" [text]="item5" class="label" fontSize="30"></Label>
-            <AnimatedCircle  horizontalAlignment="center" *ngIf="isCorrect5" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            <Label  horizontalAlignment="center" [text]="item6" class="label" fontSize="30"></Label> 
-            <AnimatedCircle  horizontalAlignment="center" *ngIf="isCorrect6" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            <Label  horizontalAlignment="center" [text]="item7" class="label" fontSize="30"></Label>
-            <AnimatedCircle  horizontalAlignment="center" *ngIf="isCorrect7" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            <Label  horizontalAlignment="center" [text]="item8" class="label" fontSize="30"></Label> 
-            <AnimatedCircle  horizontalAlignment="center" *ngIf="isCorrect8" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-        </StackLayout>
-        <StackLayout>
-            <Label text="Total taken" horizontalAlignment="right"></Label>
-            <Label [text]="count" horizontalAlignment="right"></Label>
-        </StackLayout>
+            <AnimatedCircle horizontalAlignment="center" *ngIf="isCorrect8" rimColor="#00cc00" fillColor="#FFA500" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect12" rimColor="#00cc00" fillColor="#FFFF00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+    </StackLayout>
         <StackLayout verticalAlignment="bottom">
             <Image verticalAlignment="bottom" [src]="lastPicture" width="150" height="150"></Image>
-            <Label verticalAlignment="bottom" [text]="imageDescription" textWrap="true" class="desc"></Label>
             <Button verticalAlignment="bottom" text="Open camera" class="btn btn-primary" (tap)=openCam()></Button>
             <Button verticalAlignment="bottom" text="Give Items" class="btn btn-primary" (tap)=getItems()></Button>
             <ActivityIndicator verticalAlignment="bottom" [busy]="isLoading"></ActivityIndicator>
