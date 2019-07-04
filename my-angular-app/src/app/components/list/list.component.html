@@ -1,13 +1,11 @@
-<StackLayout>
+<ActionBar title="uSpy" class="actionBar" color="white"></ActionBar>
+<StackLayout class="page">
     <StackLayout>
         <StackLayout>
-            <RadDataForm [source]="list"></RadDataForm>
+            <RadDataForm [source]="list" class="form"></RadDataForm>
         </StackLayout>
         <StackLayout>
-            <Button text="Save and Play!" class="btn btn-primary" (tap)="onSubmit()"></Button>
-        </StackLayout>
-        <StackLayout>
-            <Button text="Profile" class="btn btn-primary" (tap)="navigateProfile()"></Button>
+            <Button text="Save and Play!" class="btn btn-primary" (tap)="onSubmit()" class="saveButton" color="white"></Button>
         </StackLayout>
     </StackLayout>
     <StackLayout loaded="StackLayoutLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
@@ -15,7 +13,7 @@
         <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
             <Button text="Profile" (tap)="profileNav()"></Button>
             <Button text="Create Game" ></Button>
-            <Button text="Friends"></Button>
+            <Button text="Logout" (tap)="logoutNav()"></Button>
         </StackLayout>
         <Label dock="top"></Label>
         </DockLayout>

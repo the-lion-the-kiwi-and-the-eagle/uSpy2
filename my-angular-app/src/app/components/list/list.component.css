@@ -1,1 +1,27 @@
 /* Add mobile styles for the component here.  */
+.saveButton {
+    background: #9BC53D;
+    padding: 10px;
+    border-radius: 70px;
+    margin: 110px;
+
+}
+
+
+.actionBar {
+    background: #5BC0EB;
+    position: center;
+}
+
+.form {
+    margin-top: 500px;
+    margin-left: 30;
+    margin-right: 30;
+    flex-grow: 2;
+    vertical-align: middle;
+}
+
+.page {
+    align-items: center;
+    flex-direction: column;
+}

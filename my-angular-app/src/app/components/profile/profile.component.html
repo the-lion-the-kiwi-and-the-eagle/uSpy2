@@ -1,3 +1,4 @@
+<ActionBar title="uSpy" class="actionBar" color="white"></ActionBar>
 <StackLayout>
     <StackLayout loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
         <StackLayout>
@@ -6,8 +7,8 @@
                 <Image src="{{'~/image/' + profilePic}}" width="275" borderRadius="200" height="250" class="picture"></Image>
             </StackLayout>
             
-            <StackLayout>
-                    <Label text="Win Streak: 13" textAlignment="center" fontSize="24" fontAttributes="Bold"></Label>
+            <StackLayout row="*" columns="*">
+                    <Label text="Win Streak: 13 🔥" textAlignment="center" fontSize="24" fontAttributes="Bold" class="winStreak" column="1"></Label> 
             </StackLayout>
         </StackLayout>
         <DockLayout height="100%">
