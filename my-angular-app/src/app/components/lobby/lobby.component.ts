@@ -10,7 +10,7 @@ import { LoginService } from '../login/login.service';
   styleUrls: ['./lobby.component.css']
 })
 export class LobbyComponent implements OnInit {
-  public games:any = [];
+  public games:any = ["CohortTroll", "spyMaster101_x", "mooty_ya_beuty"];
   public gameHash:any = {};
   public joinGame:string = 'created a game';
   public gameCount:number = 0;

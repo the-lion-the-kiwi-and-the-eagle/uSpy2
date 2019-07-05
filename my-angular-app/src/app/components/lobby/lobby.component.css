@@ -7,9 +7,9 @@
 
 .gameCount {
     background: #9BC53D;
-    padding: 10px;
+    padding: 5px;
     border-radius: 70px;
-    margin: 110px;
+    margin: 60px;
 }
 
 .lobbyTitle {
@@ -21,4 +21,10 @@
     margin: 120px;
     display: flex;
     color: #9BC53D;
+}
+
+.game {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5BC0EB;
+    font-size: 24px;
 }
