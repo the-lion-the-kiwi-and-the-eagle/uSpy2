@@ -1,13 +1,14 @@
 <ActionBar title="uSpy" class="actionBar" color="white"></ActionBar>
 <StackLayout class="winner" backgroundImage="~/image/confetti.png">
+    <Label text="Winner!!" class="message"></Label>
 </StackLayout>
             <StackLayout>
                 <DockLayout height="100%">
                     <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
-                        <Button text="Home" (tap)="homeNav()"></Button>
+                        <Button text="Profile" (tap)="profileNav()"></Button>
                         <Button text="Create Game" (tap)=createGame()></Button>
                         <Button text="Invite Friends" (tap)="friendNav()"></Button>
                     </StackLayout>
                     <Label dock="top"></Label>
                     </DockLayout>
-            </StackLayout>
+            </StackLayout> 
