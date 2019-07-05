@@ -1,21 +1,21 @@
+<ActionBar title="uSpy" class="actionBar" color="white"></ActionBar>
 <StackLayout>
     <StackLayout loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd">
         <StackLayout>
-            <Label text="{{LoginService.userEmail}} Profile" fontSize="32" textAlignment="center"></Label>
-            <Image src="{{'~/image/' + profilePic}}" width="275" borderRadius="200" height="250" ></Image>
-            
+            <Label text="{{LoginService.userEmail}}" textAlignment="center" class="name"></Label>
             <StackLayout>
-                    <Label text="Win Streak: 13" textAlignment="center" fontSize="24" fontAttributes="Bold"></Label>
+                <Image src="{{'~/image/' + profilePic}}" width="275" borderRadius="200" height="250" class="picture"></Image>
             </StackLayout>
-            <StackLayout>
-                    <Button text="Back" class="btn btn-primary" (tap)="backButton()"></Button>
+            
+            <StackLayout row="*" columns="*">
+                    <Label text="Win Streak: 13 🔥" textAlignment="center" fontSize="24" fontAttributes="Bold" class="winStreak" column="1"></Label> 
             </StackLayout>
         </StackLayout>
         <DockLayout height="100%">
         <StackLayout dock="bottom" height="50" class="bottom-navigation" orientation="horizontal">
             <Button text="Lobby" (tap)="lobbyNav()"></Button>
             <Button text="Create Game" (tap)=createGame()></Button>
-            <Button text="Friends" (tap)="friendNav()"></Button>
+            <Button text="Friends" (tap)="friendNav()" (tap)="onSubmit()"></Button>
         </StackLayout>
         <Label dock="top"></Label>
         </DockLayout>

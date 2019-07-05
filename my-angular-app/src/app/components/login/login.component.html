@@ -1,4 +1,4 @@
-<StackLayout verticalAlignment="bottom">
+<!-- <StackLayout verticalAlignment="bottom">
     <ns-action-bar [title]="isLogin ? 'Login' : 'Signup'" [hasMenu]="false"></ns-action-bar>
     <RadDataForm [source]="credentials"></RadDataForm>
     <Button class="btn btn-rounded-sm" [text]="isLogin ? 'Signup instead' : 'Login instead'" (tap)="onSwitch()"></Button>
@@ -6,7 +6,59 @@
     <Button [text]="isLogin ? 'Login' : 'Signup'" class="btn btn-primary btn-rounded-sm" (tap)="onSubmit()"></Button>
   
     <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
-</StackLayout>
+</StackLayout> -->
+
+<!-- <Gradient direction="to right" colors="#39B994, #337FC7">
+        <StackLayout verticalAlignment="bottom">
+                 <StackLayout class="container">
+                <FlexboxLayout alignItems="center" class="border-bottom"verticalAlignment="bottom">
+                <ns-action-bar [title]="isLogin ? 'Login' : 'Signup'" [hasMenu]="false"></ns-action-bar>
+                <RadDataForm [source]="credentials"></RadDataForm>
+                <Button class="btn btn-rounded-sm" [text]="isLogin ? 'Signup instead' : 'Login instead'" (tap)="onSwitch()"></Button>
+                
+                <Button [text]="isLogin ? 'Login' : 'Signup'" class="btn btn-primary btn-rounded-sm" (tap)="onSubmit()"></Button>
+              
+                <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
+                </FlexboxLayout>
+                </StackLayout> -->
+            <!-- </StackLayout>  -->
+            
+<!-- </Gradient> --> 
+
+<template>
+        <Page>
+          <ActionBar title="Login" class="action-bar" ></ActionBar>
+          <Gradient direction="to right" colors="#5BC0EB, #9BC53D">
+              <!-- "#39B994, #337FC7" -->
+              <Image src="~/image/logo2.png" class="logo-container "></Image>
+            <FlexboxLayout flexDirection="column" justifyContent="center" class="full-height">
+      
+              <StackLayout class="container">
+                <Image src="~/image/user.png" width="16" height="16" class="icon-margin"></Image>
+                <ns-action-bar [title]="isLogin ? 'Login' : 'Signup'" [hasMenu]="false"></ns-action-bar>
+
+                <RadDataForm [source]="credentials" class="form-input"></RadDataForm>
+                <Button [text]="isLogin ? 'Login' : 'Signup'" (tap)="onSubmit()" class="my-button"></Button>
+      
+                <FlexboxLayout alignItems="center" justifyContent="space-between" class="auth-buttons">
+                  <Label horizontalAlignment="left" [text]="isLogin ? 'Signup instead' : 'Login instead'" (tap)="onSwitch()"></Label>
+                  <Label horizontalAlignment="right" text="Forgot Password"></Label>
+                </FlexboxLayout>
+              </StackLayout>
+      
+            </FlexboxLayout>
+      
+          </Gradient>
+        </Page>
+      </template>
+
+<!-- <ns-action-bar [title]="isLogin ? 'Login' : 'Signup'" [hasMenu]="false"></ns-action-bar>
+<RadDataForm [source]="credentials"></RadDataForm>
+<Button class="btn btn-rounded-sm" [text]="isLogin ? 'Signup instead' : 'Login instead'" (tap)="onSwitch()"></Button>
+
+<Button [text]="isLogin ? 'Login' : 'Signup'" class="btn btn-primary btn-rounded-sm" (tap)="onSubmit()"></Button>
+
+<ActivityIndicator [busy]="isLoading"></ActivityIndicator> -->
 <!-- <StackLayout class="form" [formGroup]="form">
     <StackLayout class="input-field">
           <Label class="label" text="E-Mail" [ngClass]="{ invalid: !emailControlIsValid }"></Label>

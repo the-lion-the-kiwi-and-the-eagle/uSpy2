@@ -33,10 +33,19 @@ export class ProfileComponent implements OnInit {
   }
   
   friendNav() {
-    this.FriendsService.getFriends(this.LoginService.userEmail);
     this.router.navigate(['/friends']);
-    console.log( this.LoginService.userEmail, "@@@@@@@@@@@");
   }
+  onSubmit() {
+    console.log( this.LoginService.userEmail, "###########");
+    this.FriendsService.getFriends(this.LoginService.userEmail)
+    .subscribe(friends =>{
+      console.log(friends);
+    });
+    console.log(this.FriendsService.getFriends);
+
+  }
+
+
   createGame() {
     this.socketIO.emit('create game', this.LoginService.userEmail) //need to emit the user who created the game's email.
     this.router.navigate(['/list'])

@@ -1,0 +1,33 @@
+.name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+    margin: 120px;
+    display: flex;
+    color: #9BC53D;
+}
+
+.picture {
+    position: absolute;
+    align-content: center;
+    margin: 100px;
+}
+
+.actionBar {
+    background: #5BC0EB;
+    position: center;
+    align-items: center;
+}
+
+.winStreak {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 70px;
+    font-size: 28px;
+    color: #9BC53D;
+}
+
+.arrow {
+    color: #5BC0EB;
+}

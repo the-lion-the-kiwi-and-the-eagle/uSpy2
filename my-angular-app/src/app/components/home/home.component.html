@@ -1,7 +1,7 @@
 
 <ActionBar title="uSpy"></ActionBar>
 <StackLayout class="main">
-<StackLayout>
+
     <GridLayout rows="*" columns="*" class="item">
         <StackLayout>
             <Label text="{{player1}}" fontSize="22"></Label>
@@ -31,17 +31,28 @@
             <Button verticalAlignment="bottom" text="Give Items" class="btn btn-primary" (tap)=getItems()></Button>
             <ActivityIndicator verticalAlignment="bottom" [busy]="isLoading"></ActivityIndicator>
         </StackLayout>  
-       </GridLayout>
-    </StackLayout> 
+    
 </StackLayout>
 
-<!-- <ActionBar title="uSpy"></ActionBar>
-<StackLayout>
-    <Card:CardView class="cardStyle">
-        <StackLayout class="cardContent">
-            <Label [text]="item1" class="label"></Label>
-            <AnimatedCircle *ngIf="isCorrect1" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-        </StackLayout>
-    </Card:CardView>
-</StackLayout> -->
 
+<!-- <CardView class="cardStyle" margin="80" elevation="40" radius="1">
+    <GridLayout rows="*" columns="*" class="item">
+            <Label text="{{LoginService.userEmail}}" fontSize="22"></Label>
+            
+                <Label [text]="item1" class="label" fontSize="24" horizontalAlignment="left" row="1" col="1" margin="5"></Label>
+                <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect1" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            
+            
+                <Label [text]="item2" class="label" fontSize="24" horizontalAlignment="left" row="2" col="1" margin="0 5 0 5"></Label> 
+                <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect2" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            
+            
+                <Label [text]="item3" class="label" fontSize="24" horizontalAlignment="left" row="3" col="1" margin="5"></Label>
+                <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect3" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            
+            
+                <Label [text]="item4" class="label" fontSize="24" horizontalAlignment="left" row="4" col="1" margin="0 5 0 5"></Label> 
+                <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect4" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+            
+    </GridLayout>
+</CardView> -->

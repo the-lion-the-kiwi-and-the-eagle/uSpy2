@@ -4,3 +4,9 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+.actionBar {
+  background: #5BC0EB;
+  position: center;
+  align-items: center;
+}

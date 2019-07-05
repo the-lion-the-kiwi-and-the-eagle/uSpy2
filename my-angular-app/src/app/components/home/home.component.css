@@ -1,16 +1,28 @@
 /* Add mobile styles for the component here.  */
-.main {
+/* .main {
     display: flex;
-}
+} */
 
-.item {
+/* .item {
     display: flex;
     align-items: center;
     border: solid;
+} */
+
+/* StackLayout {
+    border-color: red;
+    border-width: 3;
+    border-radius: 30;
 }
 
+RadListView {
+    border-color: red;
+    border-width: 3;
+    border-radius: 30;
+} */
+
 .label {
-    font-family: Open Sans;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 28;
 }
 
