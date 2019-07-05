@@ -145,7 +145,6 @@ export class HomeComponent implements OnInit {
             
             TNSFancyAlert.showSuccess(
               `You found the ${this.item1}!`,
-              "Sweet!"
              );
              if(this.isCorrect1 === true && this.isCorrect2 === true && this.isCorrect3 === true && this.isCorrect4 === true || this.isCorrect5 === true && this.isCorrect6 === true && this.isCorrect7 === true && this.isCorrect8 === true) {
               this.socketIO.emit('end game', 'game is won'); 
@@ -159,7 +158,6 @@ export class HomeComponent implements OnInit {
             this.socketIO.emit('correct2', ({correct: true, username: this.LoginService.userEmail}));
             TNSFancyAlert.showSuccess(
               `You found the ${this.item2}!`,
-              "Sweet!"
              );
              if(this.isCorrect1 === true && this.isCorrect2 === true && this.isCorrect3 === true && this.isCorrect4 === true || this.isCorrect5 === true && this.isCorrect6 === true && this.isCorrect7 === true && this.isCorrect8 === true) {
               this.socketIO.emit('end game', 'game is won');
@@ -173,7 +171,6 @@ export class HomeComponent implements OnInit {
             this.socketIO.emit('correct3', ({correct: true, username: this.LoginService.userEmail}));
             TNSFancyAlert.showSuccess(
               `You found the ${this.item3}!`,
-              "Sweet!"
              );
              if(this.isCorrect1 === true && this.isCorrect2 === true && this.isCorrect3 === true && this.isCorrect4 === true || this.isCorrect5 === true && this.isCorrect6 === true && this.isCorrect7 === true && this.isCorrect8 === true) {
               this.socketIO.emit('end game', 'game is won');
@@ -187,7 +184,6 @@ export class HomeComponent implements OnInit {
             this.socketIO.emit('correct4', ({correct: true, username: this.LoginService.userEmail}));
             TNSFancyAlert.showSuccess(
               `You found the ${this.item4}!`,
-              "Sweet!"
              );
              if(this.isCorrect1 === true && this.isCorrect2 === true && this.isCorrect3 === true && this.isCorrect4 === true || this.isCorrect5 === true && this.isCorrect6 === true && this.isCorrect7 === true && this.isCorrect8 === true) {
               this.socketIO.emit('end game', 'game is won');
