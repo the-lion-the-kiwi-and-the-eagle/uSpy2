@@ -195,7 +195,6 @@ export class HomeComponent implements OnInit {
             
             TNSFancyAlert.showSuccess(
               `You found the ${this.item1}!`,
-              "Sweet!"
              );
             } else if (this.LoginService.userEmail === this.player2) {
               this.isCorrect5 = true;
@@ -204,14 +203,12 @@ export class HomeComponent implements OnInit {
             
             TNSFancyAlert.showSuccess(
               `You found the ${this.item1}!`,
-              "Sweet!"
              );
             } else if (this.LoginService.userEmail === this.player3) {
               this.isCorrect9 = true;
               this.socketIO.emit('correct9', ({correct: true, username: this.LoginService.userEmail}));
               TNSFancyAlert.showSuccess(
                 `You found the ${this.item1}!`,
-                "Sweet!"
                );
             }
              if(this.isCorrect1 === true && this.isCorrect2 === true && this.isCorrect3 === true && this.isCorrect4 === true || this.isCorrect5 === true && this.isCorrect6 === true && this.isCorrect7 === true && this.isCorrect8 === true || this.isCorrect9 === true && this.isCorrect10 === true && this.isCorrect11 === true && this.isCorrect12 === true) {
@@ -225,21 +222,18 @@ export class HomeComponent implements OnInit {
               this.socketIO.emit('correct2', ({correct: true, username: this.LoginService.userEmail}));
               TNSFancyAlert.showSuccess(
                 `You found the ${this.item2}!`,
-                "Sweet!"
                );
             } else if (this.LoginService.userEmail === this.player2) {
               this.isCorrect6 = true;
               this.socketIO.emit('correct6', ({correct: true, username: this.LoginService.userEmail}));
               TNSFancyAlert.showSuccess(
                 `You found the ${this.item2}!`,
-                "Sweet!"
                );
             } else {
               this.isCorrect10 = true;
               this.socketIO.emit('correct10', ({correct: true, username: this.LoginService.userEmail}));
             TNSFancyAlert.showSuccess(
               `You found the ${this.item2}!`,
-              "Sweet!"
              );
             }
            if(this.isCorrect1 === true && this.isCorrect2 === true && this.isCorrect3 === true && this.isCorrect4 === true || this.isCorrect5 === true && this.isCorrect6 === true && this.isCorrect7 === true && this.isCorrect8 === true || this.isCorrect9 === true && this.isCorrect10 === true && this.isCorrect11 === true && this.isCorrect12 === true) {
@@ -254,21 +248,18 @@ export class HomeComponent implements OnInit {
             this.socketIO.emit('correct3', ({correct: true, username: this.LoginService.userEmail}));
             TNSFancyAlert.showSuccess(
               `You found the ${this.item3}!`,
-              "Sweet!"
              );
             } else if (this.LoginService.userEmail === this.player2) {
               this.isCorrect7 = true;
               this.socketIO.emit('correct7', ({correct: true, username: this.LoginService.userEmail}));
               TNSFancyAlert.showSuccess(
                 `You found the ${this.item3}!`,
-                "Sweet!"
                );
             } else {
               this.isCorrect11 = true;
               this.socketIO.emit('correct11', ({correct: true, username: this.LoginService.userEmail}));
               TNSFancyAlert.showSuccess(
                 `You found the ${this.item3}!`,
-                "Sweet!"
                );
             }
           if(this.isCorrect1 === true && this.isCorrect2 === true && this.isCorrect3 === true && this.isCorrect4 === true || this.isCorrect5 === true && this.isCorrect6 === true && this.isCorrect7 === true && this.isCorrect8 === true || this.isCorrect9 === true && this.isCorrect10 === true && this.isCorrect11 === true && this.isCorrect12 === true) {
@@ -282,21 +273,18 @@ export class HomeComponent implements OnInit {
                 this.socketIO.emit('correct4', ({correct: true, username: this.LoginService.userEmail}));
               TNSFancyAlert.showSuccess(
               `You found the ${this.item4}!`,
-              "Sweet!"
              );
           } else if (this.LoginService.userEmail === this.player2) {
             this.isCorrect8 = true;
             this.socketIO.emit('correct8', ({correct: true, username: this.LoginService.userEmail}));
             TNSFancyAlert.showSuccess(
               `You found the ${this.item4}!`,
-              "Sweet!"
              );
           } else {
             this.isCorrect12 = true;
             this.socketIO.emit('correct12', ({correct: true, username: this.LoginService.userEmail}));
             TNSFancyAlert.showSuccess(
               `You found the ${this.item4}!`,
-              "Sweet!"
              );
           }
             
