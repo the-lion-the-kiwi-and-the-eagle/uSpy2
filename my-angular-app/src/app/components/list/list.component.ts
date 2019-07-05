@@ -3,6 +3,7 @@ import { Observable } from "tns-core-modules/data/observable";
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ListServiceService } from './list-service.service';
 import { LoginService } from '../login/login.service';
+import { SocketIO } from 'nativescript-socketio/socketio';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { LoginService } from '../login/login.service';
 })
 @Injectable({ providedIn: 'root' })
 export class ListComponent extends Observable {
-  constructor(private router: RouterExtensions, private listService: ListServiceService, private LoginService: LoginService) { 
+  constructor(private router: RouterExtensions, private listService: ListServiceService, private LoginService: LoginService, private socketIO: SocketIO) { 
     super();
     this.list = new Items(null, null, null, null);
   }
@@ -33,6 +34,7 @@ export class ListComponent extends Observable {
   onSubmit() {
     this.listService.itemChange(this.list)
     this.router.navigate([`/home/${this.LoginService.userEmail}`]);
+    this.socketIO.emit('get players');
     console.log(this.list);
     // return this.get()
   }
