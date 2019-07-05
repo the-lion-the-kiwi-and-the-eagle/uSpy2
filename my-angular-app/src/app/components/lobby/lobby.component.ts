@@ -18,6 +18,10 @@ export class LobbyComponent implements OnInit {
   constructor(private router: RouterExtensions, private socketIO: SocketIO, private ref: ChangeDetectorRef, private LoginService: LoginService) {}
 // in here we are successfully receiving the host emails after they have created a game and joined a room
   ngOnInit() {
+    if (this.games.length === 0) {
+      this.socketIO.emit('get games');
+
+    }
     // game created by user
     this.socketIO.on('game created', (hostEmail) => {
       // game added to queue if it doesn't already exist
@@ -29,6 +33,14 @@ export class LobbyComponent implements OnInit {
       } else {
         console.log('duplicate game created')
       }
+
+      this.socketIO.on('give games', (allGames) => {
+        allGames.forEach((game) => {
+
+          this.games.unshift(game);
+        })
+        this.ref.detectChanges();
+      })
       //refresh game list for all users
       this.socketIO.emit('refresh games', this.games);
       this.socketIO.on('refreshed list', (list) => {
@@ -36,11 +48,10 @@ export class LobbyComponent implements OnInit {
         list.forEach((game) => {
         if (!this.games.includes(game)) {
           this.games.unshift(game)
-        this.ref.detectChanges(); 
+        
       }
-      this.ref.detectChanges(); 
+      this.ref.detectChanges();
     })
-    this.ref.detectChanges(); 
   })
 })
 }
