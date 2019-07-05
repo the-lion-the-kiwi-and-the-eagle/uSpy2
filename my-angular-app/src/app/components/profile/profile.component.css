@@ -12,7 +12,7 @@
 .picture {
     position: absolute;
     align-content: center;
-    margin: 100px;
+    margin: 70px;
 }
 
 .actionBar {
@@ -26,8 +26,4 @@
     margin: 70px;
     font-size: 28px;
     color: #9BC53D;
-}
-
-.arrow {
-    color: #5BC0EB;
 }
