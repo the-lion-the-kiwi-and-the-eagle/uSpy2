@@ -30,3 +30,15 @@ RadListView {
     align-self: center;
     margin-left: 80px;
 }
+
+.actionBar {
+    background: #5BC0EB;
+    position: center;
+}
+
+.button {
+    background: #9BC53D;
+    padding: 10px;
+    border-radius: 70px;
+    margin: 110px;
+}

@@ -1,5 +1,5 @@
+<ActionBar title="uSpy" class="actionBar" color="white"></ActionBar>
 
-<ActionBar title="uSpy"></ActionBar>
 <StackLayout class="main">
 
     <GridLayout rows="*" columns="*" class="item">
@@ -23,15 +23,16 @@
             <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect10" rimColor="#00cc00" text="{{item2}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect12" rimColor="#00cc00" text="{{item4}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <!-- <Label [text]="item4" class="label" fontSize="50"></Label>  -->
-    </StackLayout>
+        </StackLayout>
         <StackLayout verticalAlignment="bottom">
             <Label text="{{item1}}, {{item2}}, {{item3}}, {{item4}}" horizontalAlignment="center"></Label>
             <Image verticalAlignment="bottom" [src]="lastPicture" width="150" height="150"></Image>
-            <Button verticalAlignment="bottom" text="Open camera" class="btn btn-primary" (tap)=openCam()></Button>
-            <Button verticalAlignment="bottom" text="Give Items" class="btn btn-primary" (tap)=getItems()></Button>
+            <Button verticalAlignment="bottom" text="Open camera" class="button" (tap)=openCam() color="white"></Button>
+            <Button verticalAlignment="bottom" text="Give Items" class="button" (tap)=getItems() color="white"></Button>
             <ActivityIndicator verticalAlignment="bottom" [busy]="isLoading"></ActivityIndicator>
         </StackLayout>  
-    
+        
+    </GridLayout>
 </StackLayout>
 
 

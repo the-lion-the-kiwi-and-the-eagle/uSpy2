@@ -1,1 +1,24 @@
 /* Add mobile styles for the component here.  */
+.actionBar {
+    background: #5BC0EB;
+    position: center;
+    align-items: center;
+}
+
+.gameCount {
+    background: #9BC53D;
+    padding: 10px;
+    border-radius: 70px;
+    margin: 110px;
+}
+
+.lobbyTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+    margin: 120px;
+    display: flex;
+    color: #9BC53D;
+}
