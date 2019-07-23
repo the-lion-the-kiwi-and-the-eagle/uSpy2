@@ -8,7 +8,7 @@ export class LoginService {
     public profilePic;
     public userEmail;
     constructor(private http: HttpClient) {}
-    private userInfo = "https://1552262b.ngrok.io/user";
+    private userInfo = "https://b55bbe75.ngrok.io/user";
 
     signUp(email: string, password: string) {
         console.log(this.userEmail)

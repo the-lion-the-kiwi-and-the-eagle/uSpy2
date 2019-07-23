@@ -5,11 +5,19 @@
     align-items: center;
 }
 
-.gameCount {
-    background: #9BC53D;
-    padding: 5px;
-    border-radius: 70px;
-    margin: 60px;
+.joinGameButton {
+    background-color: #5BC0EB;
+    color: white;
+    font-weight: bold;
+    border-radius: 15;
+    padding-top: 14;
+    padding-bottom: 14;
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    margin-bottom: 20;
+    margin-top: 10;
+    margin-left: 50;
+    margin-right: 50;
 }
 
 .lobbyTitle {
@@ -18,7 +26,8 @@
     font-size: 36px;
     align-items: center;
     text-align: center;
-    margin: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     color: #9BC53D;
 }

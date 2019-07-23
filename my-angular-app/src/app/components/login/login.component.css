@@ -8,7 +8,7 @@
   }
   .form-input {
     color: white;
-    placeholder-color: white;
+    
   }
   .icon-margin {
     margin-right: 10;
@@ -24,6 +24,7 @@
     letter-spacing: 0.1;
     margin-bottom: 20;
     margin-top: 10;
+    
   }
   .auth-buttons {
     color: white;

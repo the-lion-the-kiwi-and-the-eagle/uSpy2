@@ -19,8 +19,9 @@ import { LobbyComponent } from "./components/lobby/lobby.component";
 import { registerElement } from "nativescript-angular/element-registry"
 import { WinnerComponent } from "./components/winner/winner.component";
 import { CardView } from "nativescript-cardview";
+import { NgShadowModule } from "nativescript-ng-shadow";
 
-var server = "https://1552262b.ngrok.io";
+var server = "https://b55bbe75.ngrok.io";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -46,7 +47,8 @@ registerElement("Gradient", () => require("nativescript-gradient").Gradient);
         ReactiveFormsModule,
         FormsModule,
         NativeScriptFormsModule,
-        SocketIOModule.forRoot(server)
+        SocketIOModule.forRoot(server),
+        NgShadowModule
     ],
     declarations: [
         HomeComponent,
