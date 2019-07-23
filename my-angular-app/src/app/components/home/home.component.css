@@ -21,14 +21,13 @@ RadListView {
     border-radius: 30;
 } */
 
+.players {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
 .label {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28;
-}
-
-.circle {
-    align-self: center;
-    margin-left: 80px;
 }
 
 .actionBar {
@@ -37,8 +36,30 @@ RadListView {
 }
 
 .button {
-    background: #9BC53D;
-    padding: 10px;
-    border-radius: 70px;
-    margin: 110px;
+border-radius: 100;
+background-color:#5BC0EB;
+width:200px;
+height:200px;
+color: black;
+
+
+}
+
+.start {
+
+    background-color:#5BC0EB;
+    width:400px;
+    height:150px;
+    color: black;
+    margin-top: 100px;
+}
+
+.image {
+    border-radius: 10px;
+    border-color: black;
+    
+}
+
+.scoreboard {
+    margin-top: 50px;
 }

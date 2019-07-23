@@ -1,58 +1,142 @@
 <ActionBar title="uSpy" class="actionBar" color="white"></ActionBar>
-
 <StackLayout class="main">
+    
+     
+    <GridLayout class="scoreboard" columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="350" height="300">
+     
+    <GridLayout visibility="{{player1 ? 'visible' : 'hidden'}}" columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675">
+        
+        <Label class="players" text="{{player1}}" row="0" col="0"></Label>
+        <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect1 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item1}}" row="0" col="1" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect1 ? 'collapse' : 'visible'}}">
+        <Label text="{{item1}}" row="0" col="1" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>         
 
-    <GridLayout rows="*" columns="*" class="item">
-        <StackLayout>
-            <Label text="{{player1}}" fontSize="22"></Label>
-            <!-- <Label [text]="item1" class="label" fontSize="30"></Label>  -->
-            <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect1" rimColor="#00cc00" text="{{item1}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect2 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item2}}" row="0" col="2" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect2 ? 'collapse' : 'visible'}}">
+        <Label text="{{item2}}" row="0" col="2" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect3 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item3}}" row="0" col="3" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect3 ? 'collapse' : 'visible'}}">
+        <Label text="{{item3}}" row="0" col="3" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect4 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item4}}" row="0" col="4" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect4 ? 'collapse' : 'visible'}}">
+        <Label text="{{item4}}" row="0" col="4" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+</GridLayout>    
+<GridLayout visibility="{{player2 ? 'visible' : 'hidden'}}" columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675">  
+<Label class="players" text="{{player2}}" row="1" col="0"></Label>
+    
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect5 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item1}}" row="1" col="1" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect5 ? 'collapse' : 'visible'}}">
+        <Label text="{{item1}}" row="1" col="1" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect6 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item2}}" row="1" col="2" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect6 ? 'collapse' : 'visible'}}">
+        <Label text="{{item2}}" row="1" col="2" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect7 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item3}}" row="1" col="3" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect7 ? 'collapse' : 'visible'}}">
+        <Label text="{{item3}}" row="1" col="3" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect8 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item4}}" row="1" col="4" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect8 ? 'collapse' : 'visible'}}">
+        <Label text="{{item4}}" row="1" col="4" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+</GridLayout>   
+<GridLayout visibility="{{player3 ? 'visible' : 'hidden'}}" columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675">   
+<Label class="players" text="{{player3}}" row="2" col="0"></Label>
+    
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect9 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item1}}" row="2" col="1" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect9 ? 'collapse' : 'visible'}}">
+        <Label text="{{item1}}" row="2" col="1" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect10 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item2}}" row="2" col="2" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect10 ? 'collapse' : 'visible'}}">
+        <Label text="{{item2}}" row="2" col="2" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect11 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item3}}" row="2" col="3" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect11 ? 'collapse' : 'visible'}}">
+        <Label text="{{item3}}" row="2" col="3" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>   
+
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect12 ? 'visible' : 'collapse'}}" >
+        <Label text="{{item4}}" row="2" col="4" color="white" backgroundColor="green" borderColor="black" borderRadius="100" textAlignment="center" fontSize="10"></Label>    
+    </GridLayout>
+    <GridLayout columns="150, 50, 50, 50, 50" rows="50, 50, 50, 50" width="500" height="675" visibility="{{isCorrect12 ? 'collapse' : 'visible'}}">
+        <Label text="{{item4}}" row="2" col="4" color="white" backgroundColor="gray" borderColor="black" borderRadius="50" textAlignment="center" fontSize="10"></Label>
+    </GridLayout>
+</GridLayout>  
+     
+
+</GridLayout> 
+
+<StackLayout>
+    <Image class="image" verticalAlignment="bottom" [src]="lastPicture" width="200" height="200"></Image>
+    <ActivityIndicator verticalAlignment="bottom" [busy]="isLoading"></ActivityIndicator>
+</StackLayout>
+<StackLayout>
+    <Button text="Camera" class="button" (tap)=openCam() ></Button>
+</StackLayout>
+<StackLayout>
+    <Button text="Start" class="start" (tap)=getItems() ></Button>
+</StackLayout>
+  
+</StackLayout>
+
+  
+       
+                <!-- <Label text="{{player1}}" fontSize="22"></Label>
+                    
+                    <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect1" rimColor="#00cc00" text="{{item1}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect2" rimColor="#00cc00" text="{{item2}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect3" rimColor="#00cc00" text="{{item3}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect4" rimColor="#00cc00" text="{{item4}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            <!-- <Label [text]="item2" class="label" fontSize="50"></Label>  -->
+     
             <Label text="{{player2}}" fontsize="22" horizontalAlignment="center"></Label>
             <AnimatedCircle horizontalAlignment="center" *ngIf="isCorrect5" rimColor="#00cc00" text="{{item1}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="center" *ngIf="isCorrect6" rimColor="#00cc00" text="{{item2}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="center" *ngIf="isCorrect7" rimColor="#00cc00" text="{{item3}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="center" *ngIf="isCorrect8" rimColor="#00cc00" text="{{item4}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            <!-- <Label [text]="item3" class="label" fontSize="50"></Label> -->
+        
             <Label text="{{player3}}" fontSize="22" horizontalAlignment="right"></Label>
             <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect9" rimColor="#00cc00" text="{{item1}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect11" rimColor="#00cc00" text="{{item3}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect10" rimColor="#00cc00" text="{{item2}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
             <AnimatedCircle horizontalAlignment="right" *ngIf="isCorrect12" rimColor="#00cc00" text="{{item4}}" textSize="5" textColor="#000000" width="50" height="50" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            <!-- <Label [text]="item4" class="label" fontSize="50"></Label>  -->
-        </StackLayout>
-        <StackLayout verticalAlignment="bottom">
-            <Label text="{{item1}}, {{item2}}, {{item3}}, {{item4}}" horizontalAlignment="center"></Label>
-            <Image verticalAlignment="bottom" [src]="lastPicture" width="150" height="150"></Image>
-            <Button verticalAlignment="bottom" text="Open camera" class="button" (tap)=openCam() color="white"></Button>
-            <Button verticalAlignment="bottom" text="Give Items" class="button" (tap)=getItems() color="white"></Button>
-            <ActivityIndicator verticalAlignment="bottom" [busy]="isLoading"></ActivityIndicator>
-        </StackLayout>  
-        
-    </GridLayout>
-</StackLayout>
+            <Label [text]="item4" class="label" fontSize="50"></Label> 
+        </StackLayout> -->
+  
 
-<!-- <CardView class="cardStyle" margin="80" elevation="40" radius="1">
-    <GridLayout rows="*" columns="*" class="item">
-            <Label text="{{LoginService.userEmail}}" fontSize="22"></Label>
-            
-                <Label [text]="item1" class="label" fontSize="24" horizontalAlignment="left" row="1" col="1" margin="5"></Label>
-                <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect1" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            
-            
-                <Label [text]="item2" class="label" fontSize="24" horizontalAlignment="left" row="2" col="1" margin="0 5 0 5"></Label> 
-                <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect2" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            
-            
-                <Label [text]="item3" class="label" fontSize="24" horizontalAlignment="left" row="3" col="1" margin="5"></Label>
-                <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect3" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            
-            
-                <Label [text]="item4" class="label" fontSize="24" horizontalAlignment="left" row="4" col="1" margin="0 5 0 5"></Label> 
-                <AnimatedCircle horizontalAlignment="left" *ngIf="isCorrect4" rimColor="#00cc00" fillColor="#00cc00" width="15" height="15" progress="10" rimWidth="2" class="circle"></AnimatedCircle>
-            
-    </GridLayout>
-</CardView> -->
+
+
