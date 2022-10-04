@@ -30,6 +30,5 @@ Run the server: npm start
 Bundle React: npm run react-dev
 
 Authors:
-Kyle Kelly
-Omar Rashid
-Stephen Guillory
+Samual Moot
+Kalkidan Mulatu
