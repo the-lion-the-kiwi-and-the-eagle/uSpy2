@@ -32,3 +32,4 @@ Bundle React: npm run react-dev
 Authors:
 Samual Moot
 Kalkidan Mulatu
+Kyle J Kelly
